@@ -1,0 +1,83 @@
+﻿@page "/login"
+@layout LoginLayout
+
+<div class="loginPage">
+    <div class="row no-gutters custom-row">
+        <!-- login-left side layout start -->
+        <div class="col-md-6">
+            <div class="loginBgCol">
+                <div class="spacecol">
+                    <div class="logincol">
+                        <div class="logo">
+                            <a href="SAM.Coach_Agenda.html"><img src="images/logo.png" alt="..."></a>
+                        </div>
+                        <div class="list-sec">
+                            <ul>
+                                <li>Increase<span>Sales Forecast Accuracy</span></li>
+                                <li>Improve<span>ROI ON FACE-TO-FACE Selling Time</span></li>
+                                <li>Auto-Input<span>Client Sales Info In CRM</span></li>
+                            </ul>
+                        </div>
+                        <div class="mobliecol">
+                            <img src="images/mobile-img.png" alt="...">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- login-left side layout end -->
+        <!-- login-form layout start -->
+        <div class="col-md-6 align-self-center bg-white">
+            <div class="loginForm">
+                <div class="loginheadCol">
+                    <h2>Log In</h2>
+                </div>
+                <div class="social-icon">
+                    <ul>
+                        <li><a href="javascript:void(0)"><img src="images/facebook.svg" alt="..."></a></li>
+                        <li><a href="javascript:void(0)"><img src="images/twitter.svg" alt="..."></a></li>
+                        <li><a href="javascript:void(0)"><img src="images/linkedin.svg" alt="..."></a></li>
+                        <li class="googleicon"><a href="javascript:void(0)"><img src="images/google.svg" alt="..."></a></li>
+                        <li><a href="javascript:void(0)" class="userCol"><img src="images/Rupak.jpg" alt="..."></a></li>
+                        <li><a href="javascript:void(0)"><img src="images/microphone.svg" alt="..."></a></li>
+                    </ul>
+                </div>
+                <span>OR Login WITH EMAIL</span>
+                <form class="formStyle" id="myForm" name="myForm">
+                    <div class="form-group">
+                        <label class="labelStyle" for="emailFld">Email Address</label>
+                        <div class="rightIconFld">
+                            <span class="fldIcon"><img src="images/icon-email.png" alt="..."></span>
+                            <input type="email" class="form-control lineFld" placeholder="" id="emailFld">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="labelStyle" for="pwdFld">Password</label>
+                        <div class="rightIconFld">
+                            <span class="fldIcon"><img src="images/icon-lock.png" alt="..."></span>
+                            <input type="password" class="form-control lineFld" placeholder="" id="pwdFld">
+                        </div>
+                    </div>
+                    <div class="form-row spacemargin">
+                        <div class="col">
+                            <div class="custom-control custom-checkbox checkBoxStyle">
+                                <input type="checkbox" class="custom-control-input" id="rememberCheck">
+                                <label class="custom-control-label" for="rememberCheck">Keep me logged in</label>
+                            </div>
+                        </div>
+                        <div class="col forgotPwdLink">
+                            <a href="javascript:void(0)">Forgot your password?</a>
+                        </div>
+                    </div>
+                    <button class="btn btnStyle btn-block mt-3" onclick="onLogin()">Login</button>
+                </form>
+            </div>
+        </div>
+        <!-- login-form layout end -->
+    </div>
+</div>
+
+
+@code {
+
+}

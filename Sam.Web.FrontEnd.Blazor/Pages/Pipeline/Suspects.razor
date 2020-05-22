@@ -1,0 +1,204 @@
+﻿@page "/pipeline/suspects"
+
+    <div class="contentsec configsec">
+        <div class="contentsecinner">
+            <div class="d-flex align-items-center justify-content-between flex-sm-row flex-column mt-2 mt-lg-0">
+                <div class="titlesec">
+                    <h3 class="mb-2 mb-sm-0" style="padding-bottom:20px;">Filter</h3>
+                </div>
+            </div>
+            <div class="d-flex align-items-center justify-content-between flex-sm-row flex-column mt-2 mt-lg-0">
+                <div class="customSelect w-100">
+                    <span class="selectStyle">
+                        <span class="selectArrow"><img src="images/arrow-down.svg" alt="..."></span>
+                        <select class="form-control">
+                            <option value="" selected="">Countries</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                        </select>
+                    </span>
+                </div>
+                <div class="customSelect w-100">
+                    <span class="selectStyle">
+                        <span class="selectArrow"><img src="images/arrow-down.svg" alt="..."></span>
+                        <select class="form-control">
+                            <option value="" selected="">Industries</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                        </select>
+                    </span>
+                </div>
+                <div class="customSelect w-100">
+                    <span class="selectStyle">
+                        <span class="selectArrow"><img src="images/arrow-down.svg" alt="..."></span>
+                        <select class="form-control">
+                            <option value="" selected="">Creadit Rating</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                        </select>
+                    </span>
+                </div>
+                <div class="customSelect w-100">
+                    <span class="selectStyle">
+                        <span class="selectArrow"><img src="images/arrow-down.svg" alt="..."></span>
+                        <select class="form-control">
+                            <option value="" selected="">LinkedIn Followers</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                        </select>
+                    </span>
+                </div>
+                <div class="customSelect w-100">
+                    <span class="selectStyle">
+                        <span class="selectArrow"><img src="images/arrow-down.svg" alt="..."></span>
+                        <select class="form-control">
+                            <option value="" selected="">Applications</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                        </select>
+                    </span>
+                </div>
+            </div>
+
+            <div class="d-flex align-items-center justify-content-between flex-sm-row flex-column mt-2 mt-lg-0">
+                <div class="customSelect w-100">
+                    <span class="selectStyle">
+                        <span class="selectArrow"><img src="images/arrow-down.svg" alt="..."></span>
+                        <select class="form-control">
+                            <option value="" selected="">Revenue Min</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                        </select>
+                    </span>
+                </div>
+                <div class="customSelect w-100">
+                    <span class="selectStyle">
+                        <span class="selectArrow"><img src="images/arrow-down.svg" alt="..."></span>
+                        <select class="form-control">
+                            <option value="" selected="">Revenue Max</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                        </select>
+                    </span>
+                </div>
+                <div class="customSelect w-100">
+                    <span class="selectStyle">
+                        <span class="selectArrow"><img src="images/arrow-down.svg" alt="..."></span>
+                        <select class="form-control">
+                            <option value="" selected="">Employee Min</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                        </select>
+                    </span>
+                </div>
+                <div class="customSelect w-100">
+                    <span class="selectStyle">
+                        <span class="selectArrow"><img src="images/arrow-down.svg" alt="..."></span>
+                        <select class="form-control">
+                            <option value="" selected="">Employee Max</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                        </select>
+                    </span>
+                </div>
+                <div class="customSelect w-100">
+                    <span class="selectStyle">
+                        <span class="selectArrow"><img src="images/arrow-down.svg" alt="..."></span>
+                        <select class="form-control">
+                            <option value="" selected="">Valutaion Min</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                        </select>
+                    </span>
+                </div>
+            </div>
+            <div class="d-flex align-items-center justify-content-between flex-sm-row flex-column mt-2 mt-lg-0">
+                <div class="titlesec">
+                    <h3 class="mb-2 mb-sm-0" style="padding-top:20px;">Suspects</h3>
+                </div>
+            </div>
+            <div class="filtersec" style="margin-top:20px;">
+                <div class="filtersecInn">
+                    <div class="tablecstm meetingpreparation table-responsive-md spaceLess">
+                        <table class="table footable">
+                            <thead>
+                                <tr>
+                                    <th width="160" align="center">Company Name<img src="images/arrow-down.svg" alt="..." style="padding-left:1px;"></th>
+                                    <th>Region<img src="images/arrow-down.svg" alt="..." style="padding-left: 2px;"></th>
+                                    <th data-hide="phone,tablet" class="mdwidthTable" align="center">Industry<img src="images/arrow-down.svg" alt="..." style="padding-left: 2px;"></th>
+                                    <th data-hide="phone,tablet" align="center">Revenue<img src="images/arrow-down.svg" alt="..." style="padding-left: 2px;"></th>
+                                    <th data-hide="phone,tablet" align="center">Source<img src="images/arrow-down.svg" alt="..." style="padding-left: 2px;"></th>
+                                    <th data-hide="phone,tablet" align="center">ICP %Match<img src="images/arrow-down.svg" alt="..." style="padding-left: 2px;"></th>
+                                    <th data-hide="phone,tablet" align="center">Assign<img src="images/arrow-down.svg" alt="..." style="padding-left: 2px;"></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td width="160" align="center">Sam.Coach</td>
+                                    <td>Asia</td>
+                                    <td>Pharmaceutical</td>
+                                    <td>$6B</td>
+                                    <td>CRM</td>
+                                    <td>99%</td>
+                                    <td>
+                                        <span class="selectStyle">
+                                            <span class="selectArrow"><img src="images/arrow-down.svg" alt="..."></span>
+                                            <select class="form-control">
+                                                <option value="" selected="">select</option>
+                                                <option value="1">Rupak C</option>
+                                                <option value="2">Roger</option>
+                                                <option value="2">Julian</option>
+                                            </select>
+                                        </span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td width="160" align="center">Sam.Coach Expert</td>
+                                    <td>Europe</td>
+                                    <td>IT & Technology</td>
+                                    <td>$3.2B</td>
+                                    <td>CRM</td>
+                                    <td>98%</td>
+                                    <td>
+                                        <span class="selectStyle">
+                                            <span class="selectArrow"><img src="images/arrow-down.svg" alt="..."></span>
+                                            <select class="form-control">
+                                                <option value="" selected="">select</option>
+                                                <option value="1">Rupak C</option>
+                                                <option value="2">Roger</option>
+                                                <option value="2">Julian</option>
+                                            </select>
+                                        </span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td width="160" align="center">Sam.Coach Advance</td>
+                                    <td>Australia</td>
+                                    <td>Energy</td>
+                                    <td>950M</td>
+                                    <td>Internet</td>
+                                    <td>87%</td>
+                                    <td>
+                                        <span class="selectStyle">
+                                            <span class="selectArrow"><img src="images/arrow-down.svg" alt="..."></span>
+                                            <select class="form-control">
+                                                <option value="" selected="">select</option>
+                                                <option value="1">Rupak C</option>
+                                                <option value="2">Roger</option>
+                                                <option value="2">Julian</option>
+                                            </select>
+                                        </span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    @code {
+
+    }
