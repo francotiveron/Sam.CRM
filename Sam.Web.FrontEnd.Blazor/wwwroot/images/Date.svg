@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="14" height="14" viewBox="0 0 14 14">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #0e2243;
+        fill-rule: evenodd;
+        filter: url(#filter);
+      }
+    </style>
+    <filter id="filter" x="185" y="174" width="14" height="14" filterUnits="userSpaceOnUse">
+      <feImage preserveAspectRatio="none" x="185" y="174" width="14" height="14" result="image" xlink:href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iMTQiIGhlaWdodD0iMTQiIHZpZXdCb3g9IjAgMCAxNCAxNCI+CiAgPGRlZnM+CiAgICA8c3R5bGU+CiAgICAgIC5jbHMtMSB7CiAgICAgICAgb3BhY2l0eTogMC45OwogICAgICAgIGZpbGw6IHVybCgjbGluZWFyLWdyYWRpZW50KTsKICAgICAgfQogICAgPC9zdHlsZT4KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0ibGluZWFyLWdyYWRpZW50IiB4MT0iNyIgeTE9IjE0IiB4Mj0iNyIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiPgogICAgICA8c3RvcCBvZmZzZXQ9IjAuMTA1IiBzdG9wLWNvbG9yPSIjMDk0YmI5Ii8+CiAgICAgIDxzdG9wIG9mZnNldD0iMC44OTUiIHN0b3AtY29sb3I9IiMwZTIyNDMiLz4KICAgIDwvbGluZWFyR3JhZGllbnQ+CiAgPC9kZWZzPgogIDxyZWN0IGNsYXNzPSJjbHMtMSIgd2lkdGg9IjE0IiBoZWlnaHQ9IjE0Ii8+Cjwvc3ZnPgo="/>
+      <feComposite result="composite" operator="in" in2="SourceGraphic"/>
+      <feBlend result="blend" in2="SourceGraphic"/>
+      <feFlood result="flood" flood-color="#0e2243" flood-opacity="0.5"/>
+      <feComposite result="composite-2" operator="in" in2="SourceGraphic"/>
+      <feBlend result="blend-2" in2="blend"/>
+    </filter>
+  </defs>
+  <path id="Forma_1" data-name="Forma 1" class="cls-1" d="M190.058,181.724a0.322,0.322,0,0,0-.325-0.318H188.6a0.321,0.321,0,0,0-.325.318v1.108a0.321,0.321,0,0,0,.325.318h1.134a0.322,0.322,0,0,0,.325-0.318v-1.108h0Zm2.834,0a0.322,0.322,0,0,0-.325-0.318h-1.134a0.322,0.322,0,0,0-.325.318v1.108a0.322,0.322,0,0,0,.325.318h1.134a0.322,0.322,0,0,0,.325-0.318v-1.108Zm2.834,0a0.322,0.322,0,0,0-.325-0.318h-1.134a0.322,0.322,0,0,0-.325.318v1.108a0.322,0.322,0,0,0,.325.318H195.4a0.322,0.322,0,0,0,.325-0.318v-1.108Zm-5.668,2.771a0.321,0.321,0,0,0-.325-0.317H188.6a0.321,0.321,0,0,0-.325.317V185.6a0.321,0.321,0,0,0,.325.317h1.134a0.321,0.321,0,0,0,.325-0.317V184.5h0Zm2.834,0a0.321,0.321,0,0,0-.325-0.317h-1.134a0.321,0.321,0,0,0-.325.317V185.6a0.321,0.321,0,0,0,.325.317h1.134a0.321,0.321,0,0,0,.325-0.317V184.5Zm2.834,0a0.321,0.321,0,0,0-.325-0.317h-1.134a0.321,0.321,0,0,0-.325.317V185.6a0.321,0.321,0,0,0,.325.317H195.4a0.321,0.321,0,0,0,.325-0.317V184.5h0Zm2.028-8.936v1.693a1.4,1.4,0,0,1-1.418,1.383h-0.894a1.407,1.407,0,0,1-1.427-1.383v-1.7h-4.031v1.7a1.406,1.406,0,0,1-1.426,1.383h-0.894a1.4,1.4,0,0,1-1.418-1.383v-1.693A1.274,1.274,0,0,0,185,176.813v9.925A1.275,1.275,0,0,0,186.283,188h11.434A1.277,1.277,0,0,0,199,186.738v-9.925A1.274,1.274,0,0,0,197.754,175.559Zm-0.416,10.561a0.548,0.548,0,0,1-.554.542h-9.592a0.549,0.549,0,0,1-.555-0.542v-5.127a0.549,0.549,0,0,1,.555-0.543h9.592a0.548,0.548,0,0,1,.554.543v5.127h0Zm-9.677-8.393h0.884a0.48,0.48,0,0,0,.486-0.475v-2.777a0.48,0.48,0,0,0-.486-0.475h-0.884a0.481,0.481,0,0,0-.487.475v2.777A0.481,0.481,0,0,0,187.661,177.727Zm7.769,0h0.885a0.481,0.481,0,0,0,.486-0.475v-2.777a0.481,0.481,0,0,0-.486-0.475H195.43a0.481,0.481,0,0,0-.486.475v2.777A0.481,0.481,0,0,0,195.43,177.727Z" transform="translate(-185 -174)"/>
+</svg>
