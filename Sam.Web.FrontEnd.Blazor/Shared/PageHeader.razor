@@ -1,7 +1,6 @@
 ﻿@inject NavigationManager _uriHelper
 
 <header>
-
     <div class="topheader">
         <div class="container-fluid">
             <div class="form-row align-items-center justify-content-center">
@@ -26,6 +25,13 @@
                 </div>
                 <div class="col" style="margin-right:60px">
                     <div class="topmenu text-right">
+
+                        <div class="buttonsheader d-none d-lg-inline-block mr-3">
+                            <div class="mx-1 d-none d-lg-inline-block"><button type="button" class="btn bg-white">+ Client</button></div>
+                            <div class="mx-1 d-none d-lg-inline-block"><button type="button" class="btn bg-white">+ Meeting</button></div>
+                            <div class="mx-1 d-none d-lg-inline-block"><button type="button" class="btn bg-white">CRM SYNC</button></div>
+                        </div>
+
                         <ul class="iconmenu">
                             <li class="searchmenu">
                                 <a href="javascript:void(0)">
@@ -45,31 +51,31 @@
                             </li>
 
                             @*<li class="usermenu">
-                                <a href="javascript:void(0)">
-                                    <p class="userimg"><img src="images/userimg.jpg" alt=""></p>
-                                    <p class="userinfo">
-                                        <span>
-                                            <a href="/myprofile">@User?.Fullname</a>
-                                            <EjsMenu @ref="Menu" Items="@MenuItems" Fields="@MenuFields" ShowItemOnClick="true">
-                                                <MenuEvents ItemSelected="itemSelected" />
-                                            </EjsMenu>
-                                        </span>
+                <a href="javascript:void(0)">
+                    <p class="userimg"><img src="images/userimg.jpg" alt=""></p>
+                    <p class="userinfo">
+                        <span>
+                            <a href="/myprofile">@User?.Fullname</a>
+                            <EjsMenu @ref="Menu" Items="@MenuItems" Fields="@MenuFields" ShowItemOnClick="true">
+                                <MenuEvents ItemSelected="itemSelected" />
+                            </EjsMenu>
+                        </span>
 
-                                        <span class="lastactive">@User?.LastLogin</span>
-                                    </p>
-                                </a>
+                        <span class="lastactive">@User?.LastLogin</span>
+                    </p>
+                </a>
 
-                            </li>*@
+            </li>*@
 
                             <li class="usermenu">
                                 @*<style>
-                                #user-image {
-                                    border-radius:50%;
-                                    height:48px;
-                                    width:48px;
-                                }
-                                </style>*@
-                                <img class="user-image" src="images/userimg.jpg" alt="" >
+                #user-image {
+                    border-radius:50%;
+                    height:48px;
+                    width:48px;
+                }
+                </style>*@
+                                <img class="user-image" src="images/userimg.jpg" alt="">
                                 <span>
                                     <a href="/myprofile">User?.Fullname</a>
                                     <a href="/myprofile">Menu</a>

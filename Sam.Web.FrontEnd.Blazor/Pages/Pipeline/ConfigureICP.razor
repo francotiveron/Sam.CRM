@@ -1,492 +1,490 @@
 ﻿@page "/pipeline/configure-icp"
 
-<div class="contentsec configsec">
-    <div class="contentsecinner">
-        <div class="d-flex align-items-center justify-content-between flex-sm-row flex-column mt-2 mt-lg-0">
-            <div class="titlesec">
-                <h3 class="mb-2 mb-sm-0">Configure ICP</h3>
-            </div>
-            <div class="">
-                <button type="button" class="btn bg-white">Search</button>
-                <button type="button" class="btn bg-white">Add category</button>
-            </div>
+<div class="contentsecinner">
+    <div class="d-flex align-items-center justify-content-between flex-sm-row flex-column mt-2 mt-lg-0">
+        <div class="titlesec">
+            <h3 class="mb-2 mb-sm-0">Configure ICP</h3>
         </div>
+        <div class="">
+            <button type="button" class="btn bg-white">Search</button>
+            <button type="button" class="btn bg-white">Add category</button>
+        </div>
+    </div>
 
-        <div class="configContent mt-4">
-            <div class="row">
-                <div class="col-md-12 col-lg-6 mb-4">
-                    <div class="configCard p-4">
-                        <div class="d-flex justify-content-between mb-3">
-                            <div class="configTitle">
-                                <h4>Background</h4>
-                            </div>
-                            <button type="button" class="btn bg-white">Add Item</button>
+    <div class="configContent mt-4">
+        <div class="row">
+            <div class="col-md-12 col-lg-6 mb-4">
+                <div class="configCard p-4">
+                    <div class="d-flex justify-content-between mb-3">
+                        <div class="configTitle">
+                            <h4>Background</h4>
                         </div>
-                        <div class="d-flex justify-content-sm-between justify-content-start align-items-center mb-3 flex-column flex-sm-row">
-                            <div class="custom-control custom-checkbox checkBoxStyle w-100 mb-1 mb-sm-0">
-                                <input type="checkbox" class="custom-control-input" id="rememberCheck1">
-                                <label class="custom-control-label" for="rememberCheck1">Country</label>
-                            </div>
-                            <div class="customSelect w-100">
-                                <span class="selectStyle">
-                                    <span class="selectArrow"><img src="images/arrow-down.svg" alt="..."></span>
-                                    <select class="form-control">
-                                        <option value="" selected="">select</option>
-                                        <option value="1">1</option>
-                                        <option value="2">2</option>
-                                    </select>
-                                </span>
-                            </div>
+                        <button type="button" class="btn bg-white">Add Item</button>
+                    </div>
+                    <div class="d-flex justify-content-sm-between justify-content-start align-items-center mb-3 flex-column flex-sm-row">
+                        <div class="custom-control custom-checkbox checkBoxStyle w-100 mb-1 mb-sm-0">
+                            <input type="checkbox" class="custom-control-input" id="rememberCheck1">
+                            <label class="custom-control-label" for="rememberCheck1">Country</label>
                         </div>
+                        <div class="customSelect w-100">
+                            <span class="selectStyle">
+                                <span class="selectArrow"><img src="images/arrow-down.svg" alt="..."></span>
+                                <select class="form-control">
+                                    <option value="" selected="">select</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                </select>
+                            </span>
+                        </div>
+                    </div>
 
-                        <div class="d-flex justify-content-sm-between justify-content-start align-items-center mb-3 flex-column flex-sm-row">
-                            <div class="custom-control custom-checkbox checkBoxStyle w-100 mb-1 mb-sm-0">
-                                <input type="checkbox" class="custom-control-input" id="rememberCheck2">
-                                <label class="custom-control-label" for="rememberCheck2">Location</label>
-                            </div>
-                            <div class="customSelect w-100">
-                                <span class="selectStyle">
-                                    <span class="selectArrow"><img src="images/arrow-down.svg" alt="..."></span>
-                                    <select class="form-control">
-                                        <option value="" selected="">select</option>
-                                        <option value="1">1</option>
-                                        <option value="2">2</option>
-                                    </select>
-                                </span>
-                            </div>
+                    <div class="d-flex justify-content-sm-between justify-content-start align-items-center mb-3 flex-column flex-sm-row">
+                        <div class="custom-control custom-checkbox checkBoxStyle w-100 mb-1 mb-sm-0">
+                            <input type="checkbox" class="custom-control-input" id="rememberCheck2">
+                            <label class="custom-control-label" for="rememberCheck2">Location</label>
                         </div>
-
-                        <div class="d-flex justify-content-sm-between justify-content-start align-items-center mb-3 flex-column flex-sm-row">
-                            <div class="custom-control custom-checkbox checkBoxStyle w-100 mb-1 mb-sm-0">
-                                <input type="checkbox" class="custom-control-input" id="rememberCheck3">
-                                <label class="custom-control-label" for="rememberCheck3">Industry</label>
-                            </div>
-                            <div class="customSelect w-100">
-                                <span class="selectStyle">
-                                    <span class="selectArrow"><img src="images/arrow-down.svg" alt="..."></span>
-                                    <select class="form-control">
-                                        <option value="" selected="">select</option>
-                                        <option value="1">1</option>
-                                        <option value="2">3</option>
-                                    </select>
-                                </span>
-                            </div>
+                        <div class="customSelect w-100">
+                            <span class="selectStyle">
+                                <span class="selectArrow"><img src="images/arrow-down.svg" alt="..."></span>
+                                <select class="form-control">
+                                    <option value="" selected="">select</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                </select>
+                            </span>
                         </div>
+                    </div>
 
-                        <div class="d-flex justify-content-sm-between justify-content-start align-items-center mb-3 flex-column flex-sm-row">
-                            <div class="custom-control custom-checkbox checkBoxStyle w-100 mb-1 mb-sm-0">
-                                <input type="checkbox" class="custom-control-input" id="rememberCheck4">
-                                <label class="custom-control-label" for="rememberCheck4">Business Model</label>
-                            </div>
-                            <div class="customSelect w-100">
-                                <span class="selectStyle">
-                                    <span class="selectArrow"><img src="images/arrow-down.svg" alt="..."></span>
-                                    <select class="form-control">
-                                        <option value="" selected="">select</option>
-                                        <option value="1">1</option>
-                                        <option value="2">2</option>
-                                    </select>
-                                </span>
-                            </div>
+                    <div class="d-flex justify-content-sm-between justify-content-start align-items-center mb-3 flex-column flex-sm-row">
+                        <div class="custom-control custom-checkbox checkBoxStyle w-100 mb-1 mb-sm-0">
+                            <input type="checkbox" class="custom-control-input" id="rememberCheck3">
+                            <label class="custom-control-label" for="rememberCheck3">Industry</label>
                         </div>
+                        <div class="customSelect w-100">
+                            <span class="selectStyle">
+                                <span class="selectArrow"><img src="images/arrow-down.svg" alt="..."></span>
+                                <select class="form-control">
+                                    <option value="" selected="">select</option>
+                                    <option value="1">1</option>
+                                    <option value="2">3</option>
+                                </select>
+                            </span>
+                        </div>
+                    </div>
 
-                        <div class="d-flex justify-content-sm-between justify-content-start align-items-center mb-3 flex-column flex-sm-row">
-                            <div class="custom-control custom-checkbox checkBoxStyle w-100 mb-1 mb-sm-0">
-                                <input type="checkbox" class="custom-control-input" id="rememberCheck5">
-                                <label class="custom-control-label" for="rememberCheck5">Year Established</label>
-                            </div>
-                            <div class="customSelect w-100">
-                                <span class="selectStyle">
-                                    <span class="selectArrow"><img src="images/arrow-down.svg" alt="..."></span>
-                                    <select class="form-control">
-                                        <option value="" selected="">select</option>
-                                        <option value="1">1</option>
-                                        <option value="2">2</option>
-                                    </select>
-                                </span>
-                            </div>
+                    <div class="d-flex justify-content-sm-between justify-content-start align-items-center mb-3 flex-column flex-sm-row">
+                        <div class="custom-control custom-checkbox checkBoxStyle w-100 mb-1 mb-sm-0">
+                            <input type="checkbox" class="custom-control-input" id="rememberCheck4">
+                            <label class="custom-control-label" for="rememberCheck4">Business Model</label>
+                        </div>
+                        <div class="customSelect w-100">
+                            <span class="selectStyle">
+                                <span class="selectArrow"><img src="images/arrow-down.svg" alt="..."></span>
+                                <select class="form-control">
+                                    <option value="" selected="">select</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                </select>
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="d-flex justify-content-sm-between justify-content-start align-items-center mb-3 flex-column flex-sm-row">
+                        <div class="custom-control custom-checkbox checkBoxStyle w-100 mb-1 mb-sm-0">
+                            <input type="checkbox" class="custom-control-input" id="rememberCheck5">
+                            <label class="custom-control-label" for="rememberCheck5">Year Established</label>
+                        </div>
+                        <div class="customSelect w-100">
+                            <span class="selectStyle">
+                                <span class="selectArrow"><img src="images/arrow-down.svg" alt="..."></span>
+                                <select class="form-control">
+                                    <option value="" selected="">select</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                </select>
+                            </span>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-12 col-lg-6 mb-4">
-                    <div class="configCard p-4">
-                        <div class="d-flex justify-content-between mb-3">
-                            <div class="configTitle">
-                                <h4>Social</h4>
-                            </div>
-                            <button type="button" class="btn bg-white">Add Item</button>
+            </div>
+            <div class="col-md-12 col-lg-6 mb-4">
+                <div class="configCard p-4">
+                    <div class="d-flex justify-content-between mb-3">
+                        <div class="configTitle">
+                            <h4>Social</h4>
                         </div>
-                        <div class="d-flex justify-content-sm-between justify-content-start align-items-center mb-3 flex-column flex-sm-row">
-                            <div class="custom-control custom-checkbox checkBoxStyle w-100 mb-1 mb-sm-0">
-                                <input type="checkbox" class="custom-control-input" id="rememberCheck6">
-                                <label class="custom-control-label" for="rememberCheck6">NPS Score</label>
-                            </div>
-                            <div class="customSelect w-100">
-                                <span class="selectStyle mr-2">
-                                    <span class="selectArrow"><img src="images/arrow-down.svg" alt="..."></span>
-                                    <select class="form-control">
-                                        <option value="" selected="">Min</option>
-                                        <option value="1">1</option>
-                                        <option value="2">2</option>
-                                    </select>
-                                </span>
-                                <span class="selectStyle">
-                                    <span class="selectArrow"><img src="images/arrow-down.svg" alt="..."></span>
-                                    <select class="form-control">
-                                        <option value="" selected="">Max</option>
-                                        <option value="1">1</option>
-                                        <option value="2">2</option>
-                                    </select>
-                                </span>
-                            </div>
+                        <button type="button" class="btn bg-white">Add Item</button>
+                    </div>
+                    <div class="d-flex justify-content-sm-between justify-content-start align-items-center mb-3 flex-column flex-sm-row">
+                        <div class="custom-control custom-checkbox checkBoxStyle w-100 mb-1 mb-sm-0">
+                            <input type="checkbox" class="custom-control-input" id="rememberCheck6">
+                            <label class="custom-control-label" for="rememberCheck6">NPS Score</label>
                         </div>
+                        <div class="customSelect w-100">
+                            <span class="selectStyle mr-2">
+                                <span class="selectArrow"><img src="images/arrow-down.svg" alt="..."></span>
+                                <select class="form-control">
+                                    <option value="" selected="">Min</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                </select>
+                            </span>
+                            <span class="selectStyle">
+                                <span class="selectArrow"><img src="images/arrow-down.svg" alt="..."></span>
+                                <select class="form-control">
+                                    <option value="" selected="">Max</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                </select>
+                            </span>
+                        </div>
+                    </div>
 
-                        <div class="d-flex justify-content-sm-between justify-content-start align-items-center mb-3 flex-column flex-sm-row">
-                            <div class="custom-control custom-checkbox checkBoxStyle w-100 mb-1 mb-sm-0">
-                                <input type="checkbox" class="custom-control-input" id="rememberCheck7">
-                                <label class="custom-control-label" for="rememberCheck7">LinkedIn Followers</label>
-                            </div>
-                            <div class="customSelect w-100">
-                                <span class="selectStyle mr-2">
-                                    <span class="selectArrow"><img src="images/arrow-down.svg" alt="..."></span>
-                                    <select class="form-control">
-                                        <option value="" selected="">Min</option>
-                                        <option value="1">1</option>
-                                        <option value="2">2</option>
-                                    </select>
-                                </span>
-                                <span class="selectStyle">
-                                    <span class="selectArrow"><img src="images/arrow-down.svg" alt="..."></span>
-                                    <select class="form-control">
-                                        <option value="" selected="">Max</option>
-                                        <option value="1">1</option>
-                                        <option value="2">2</option>
-                                    </select>
-                                </span>
-                            </div>
+                    <div class="d-flex justify-content-sm-between justify-content-start align-items-center mb-3 flex-column flex-sm-row">
+                        <div class="custom-control custom-checkbox checkBoxStyle w-100 mb-1 mb-sm-0">
+                            <input type="checkbox" class="custom-control-input" id="rememberCheck7">
+                            <label class="custom-control-label" for="rememberCheck7">LinkedIn Followers</label>
                         </div>
-
-                        <div class="d-flex justify-content-sm-between justify-content-start align-items-center mb-3 flex-column flex-sm-row">
-                            <div class="custom-control custom-checkbox checkBoxStyle w-100 mb-1 mb-sm-0">
-                                <input type="checkbox" class="custom-control-input" id="rememberCheck8">
-                                <label class="custom-control-label" for="rememberCheck8">Facebook Followers</label>
-                            </div>
-                            <div class="customSelect w-100">
-                                <span class="selectStyle mr-2">
-                                    <span class="selectArrow"><img src="images/arrow-down.svg" alt="..."></span>
-                                    <select class="form-control">
-                                        <option value="" selected="">Min</option>
-                                        <option value="1">1</option>
-                                        <option value="2">2</option>
-                                    </select>
-                                </span>
-                                <span class="selectStyle">
-                                    <span class="selectArrow"><img src="images/arrow-down.svg" alt="..."></span>
-                                    <select class="form-control">
-                                        <option value="" selected="">Max</option>
-                                        <option value="1">1</option>
-                                        <option value="2">2</option>
-                                    </select>
-                                </span>
-                            </div>
+                        <div class="customSelect w-100">
+                            <span class="selectStyle mr-2">
+                                <span class="selectArrow"><img src="images/arrow-down.svg" alt="..."></span>
+                                <select class="form-control">
+                                    <option value="" selected="">Min</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                </select>
+                            </span>
+                            <span class="selectStyle">
+                                <span class="selectArrow"><img src="images/arrow-down.svg" alt="..."></span>
+                                <select class="form-control">
+                                    <option value="" selected="">Max</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                </select>
+                            </span>
                         </div>
+                    </div>
 
-                        <div class="d-flex justify-content-sm-between justify-content-start align-items-center mb-3 flex-column flex-sm-row">
-                            <div class="custom-control custom-checkbox checkBoxStyle w-100 mb-1 mb-sm-0">
-                                <input type="checkbox" class="custom-control-input" id="rememberCheck9">
-                                <label class="custom-control-label" for="rememberCheck9">Twitter Followers</label>
-                            </div>
-                            <div class="customSelect w-100">
-                                <span class="selectStyle mr-2">
-                                    <span class="selectArrow"><img src="images/arrow-down.svg" alt="..."></span>
-                                    <select class="form-control">
-                                        <option value="" selected="">Min</option>
-                                        <option value="1">1</option>
-                                        <option value="2">2</option>
-                                    </select>
-                                </span>
-                                <span class="selectStyle">
-                                    <span class="selectArrow"><img src="images/arrow-down.svg" alt="..."></span>
-                                    <select class="form-control">
-                                        <option value="" selected="">Max</option>
-                                        <option value="1">1</option>
-                                        <option value="2">2</option>
-                                    </select>
-                                </span>
-                            </div>
+                    <div class="d-flex justify-content-sm-between justify-content-start align-items-center mb-3 flex-column flex-sm-row">
+                        <div class="custom-control custom-checkbox checkBoxStyle w-100 mb-1 mb-sm-0">
+                            <input type="checkbox" class="custom-control-input" id="rememberCheck8">
+                            <label class="custom-control-label" for="rememberCheck8">Facebook Followers</label>
                         </div>
+                        <div class="customSelect w-100">
+                            <span class="selectStyle mr-2">
+                                <span class="selectArrow"><img src="images/arrow-down.svg" alt="..."></span>
+                                <select class="form-control">
+                                    <option value="" selected="">Min</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                </select>
+                            </span>
+                            <span class="selectStyle">
+                                <span class="selectArrow"><img src="images/arrow-down.svg" alt="..."></span>
+                                <select class="form-control">
+                                    <option value="" selected="">Max</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                </select>
+                            </span>
+                        </div>
+                    </div>
 
-                        <div class="d-flex justify-content-sm-between justify-content-start align-items-center mb-3 flex-column flex-sm-row">
-                            <div class="custom-control custom-checkbox checkBoxStyle w-100 mb-1 mb-sm-0">
-                                <input type="checkbox" class="custom-control-input" id="rememberCheck10">
-                                <label class="custom-control-label" for="rememberCheck10">Instagram Followers</label>
-                            </div>
-                            <div class="customSelect w-100">
-                                <span class="selectStyle mr-2">
-                                    <span class="selectArrow"><img src="images/arrow-down.svg" alt="..."></span>
-                                    <select class="form-control">
-                                        <option value="" selected="">Min</option>
-                                        <option value="1">1</option>
-                                        <option value="2">2</option>
-                                    </select>
-                                </span>
-                                <span class="selectStyle">
-                                    <span class="selectArrow"><img src="images/arrow-down.svg" alt="..."></span>
-                                    <select class="form-control">
-                                        <option value="" selected="">Max</option>
-                                        <option value="1">1</option>
-                                        <option value="2">2</option>
-                                    </select>
-                                </span>
-                            </div>
+                    <div class="d-flex justify-content-sm-between justify-content-start align-items-center mb-3 flex-column flex-sm-row">
+                        <div class="custom-control custom-checkbox checkBoxStyle w-100 mb-1 mb-sm-0">
+                            <input type="checkbox" class="custom-control-input" id="rememberCheck9">
+                            <label class="custom-control-label" for="rememberCheck9">Twitter Followers</label>
+                        </div>
+                        <div class="customSelect w-100">
+                            <span class="selectStyle mr-2">
+                                <span class="selectArrow"><img src="images/arrow-down.svg" alt="..."></span>
+                                <select class="form-control">
+                                    <option value="" selected="">Min</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                </select>
+                            </span>
+                            <span class="selectStyle">
+                                <span class="selectArrow"><img src="images/arrow-down.svg" alt="..."></span>
+                                <select class="form-control">
+                                    <option value="" selected="">Max</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                </select>
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="d-flex justify-content-sm-between justify-content-start align-items-center mb-3 flex-column flex-sm-row">
+                        <div class="custom-control custom-checkbox checkBoxStyle w-100 mb-1 mb-sm-0">
+                            <input type="checkbox" class="custom-control-input" id="rememberCheck10">
+                            <label class="custom-control-label" for="rememberCheck10">Instagram Followers</label>
+                        </div>
+                        <div class="customSelect w-100">
+                            <span class="selectStyle mr-2">
+                                <span class="selectArrow"><img src="images/arrow-down.svg" alt="..."></span>
+                                <select class="form-control">
+                                    <option value="" selected="">Min</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                </select>
+                            </span>
+                            <span class="selectStyle">
+                                <span class="selectArrow"><img src="images/arrow-down.svg" alt="..."></span>
+                                <select class="form-control">
+                                    <option value="" selected="">Max</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                </select>
+                            </span>
                         </div>
                     </div>
                 </div>
+            </div>
 
-                <div class="col-md-12 col-lg-6 mb-4">
-                    <div class="configCard p-4">
-                        <div class="d-flex justify-content-between mb-3">
-                            <div class="configTitle">
-                                <h4>Financial</h4>
-                            </div>
-                            <button type="button" class="btn bg-white">Add Item</button>
+            <div class="col-md-12 col-lg-6 mb-4">
+                <div class="configCard p-4">
+                    <div class="d-flex justify-content-between mb-3">
+                        <div class="configTitle">
+                            <h4>Financial</h4>
                         </div>
-                        <div class="d-flex justify-content-sm-between justify-content-start align-items-center mb-3 flex-column flex-sm-row">
-                            <div class="custom-control custom-checkbox checkBoxStyle w-100 mb-1 mb-sm-0">
-                                <input type="checkbox" class="custom-control-input" id="rememberCheck11">
-                                <label class="custom-control-label" for="rememberCheck11">Market Cap</label>
-                            </div>
-                            <div class="customSelect w-100">
-                                <span class="selectStyle mr-2">
-                                    <span class="selectArrow"><img src="images/arrow-down.svg" alt="..."></span>
-                                    <select class="form-control">
-                                        <option value="" selected="">Min</option>
-                                        <option value="1">1</option>
-                                        <option value="2">2</option>
-                                    </select>
-                                </span>
-                                <span class="selectStyle">
-                                    <span class="selectArrow"><img src="images/arrow-down.svg" alt="..."></span>
-                                    <select class="form-control">
-                                        <option value="" selected="">Max</option>
-                                        <option value="1">1</option>
-                                        <option value="2">2</option>
-                                    </select>
-                                </span>
-                            </div>
+                        <button type="button" class="btn bg-white">Add Item</button>
+                    </div>
+                    <div class="d-flex justify-content-sm-between justify-content-start align-items-center mb-3 flex-column flex-sm-row">
+                        <div class="custom-control custom-checkbox checkBoxStyle w-100 mb-1 mb-sm-0">
+                            <input type="checkbox" class="custom-control-input" id="rememberCheck11">
+                            <label class="custom-control-label" for="rememberCheck11">Market Cap</label>
                         </div>
+                        <div class="customSelect w-100">
+                            <span class="selectStyle mr-2">
+                                <span class="selectArrow"><img src="images/arrow-down.svg" alt="..."></span>
+                                <select class="form-control">
+                                    <option value="" selected="">Min</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                </select>
+                            </span>
+                            <span class="selectStyle">
+                                <span class="selectArrow"><img src="images/arrow-down.svg" alt="..."></span>
+                                <select class="form-control">
+                                    <option value="" selected="">Max</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                </select>
+                            </span>
+                        </div>
+                    </div>
 
-                        <div class="d-flex justify-content-sm-between justify-content-start align-items-center mb-3 flex-column flex-sm-row">
-                            <div class="custom-control custom-checkbox checkBoxStyle w-100 mb-1 mb-sm-0">
-                                <input type="checkbox" class="custom-control-input" id="rememberCheck12">
-                                <label class="custom-control-label" for="rememberCheck12">Revenue</label>
-                            </div>
-                            <div class="customSelect w-100">
-                                <span class="selectStyle mr-2">
-                                    <span class="selectArrow"><img src="images/arrow-down.svg" alt="..."></span>
-                                    <select class="form-control">
-                                        <option value="" selected="">Min</option>
-                                        <option value="1">1</option>
-                                        <option value="2">2</option>
-                                    </select>
-                                </span>
-                                <span class="selectStyle">
-                                    <span class="selectArrow"><img src="images/arrow-down.svg" alt="..."></span>
-                                    <select class="form-control">
-                                        <option value="" selected="">Max</option>
-                                        <option value="1">1</option>
-                                        <option value="2">2</option>
-                                    </select>
-                                </span>
-                            </div>
+                    <div class="d-flex justify-content-sm-between justify-content-start align-items-center mb-3 flex-column flex-sm-row">
+                        <div class="custom-control custom-checkbox checkBoxStyle w-100 mb-1 mb-sm-0">
+                            <input type="checkbox" class="custom-control-input" id="rememberCheck12">
+                            <label class="custom-control-label" for="rememberCheck12">Revenue</label>
                         </div>
-
-                        <div class="d-flex justify-content-sm-between justify-content-start align-items-center mb-3 flex-column flex-sm-row">
-                            <div class="custom-control custom-checkbox checkBoxStyle w-100 mb-1 mb-sm-0">
-                                <input type="checkbox" class="custom-control-input" id="rememberCheck13">
-                                <label class="custom-control-label" for="rememberCheck13">Employees</label>
-                            </div>
-                            <div class="customSelect w-100">
-                                <span class="selectStyle mr-2">
-                                    <span class="selectArrow"><img src="images/arrow-down.svg" alt="..."></span>
-                                    <select class="form-control">
-                                        <option value="" selected="">Min</option>
-                                        <option value="1">1</option>
-                                        <option value="2">2</option>
-                                    </select>
-                                </span>
-                                <span class="selectStyle">
-                                    <span class="selectArrow"><img src="images/arrow-down.svg" alt="..."></span>
-                                    <select class="form-control">
-                                        <option value="" selected="">Max</option>
-                                        <option value="1">1</option>
-                                        <option value="2">2</option>
-                                    </select>
-                                </span>
-                            </div>
+                        <div class="customSelect w-100">
+                            <span class="selectStyle mr-2">
+                                <span class="selectArrow"><img src="images/arrow-down.svg" alt="..."></span>
+                                <select class="form-control">
+                                    <option value="" selected="">Min</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                </select>
+                            </span>
+                            <span class="selectStyle">
+                                <span class="selectArrow"><img src="images/arrow-down.svg" alt="..."></span>
+                                <select class="form-control">
+                                    <option value="" selected="">Max</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                </select>
+                            </span>
                         </div>
+                    </div>
 
-                        <div class="d-flex justify-content-sm-between justify-content-start align-items-center mb-3 flex-column flex-sm-row">
-                            <div class="custom-control custom-checkbox checkBoxStyle w-100 mb-1 mb-sm-0">
-                                <input type="checkbox" class="custom-control-input" id="rememberCheck14">
-                                <label class="custom-control-label" for="rememberCheck14">Financial Year</label>
-                            </div>
-                            <div class="customSelect w-100">
-                                <span class="selectStyle">
-                                    <span class="selectArrow"><img src="images/arrow-down.svg" alt="..."></span>
-                                    <select class="form-control">
-                                        <option value="" selected="">Max</option>
-                                        <option value="1">1</option>
-                                        <option value="2">2</option>
-                                    </select>
-                                </span>
-                            </div>
+                    <div class="d-flex justify-content-sm-between justify-content-start align-items-center mb-3 flex-column flex-sm-row">
+                        <div class="custom-control custom-checkbox checkBoxStyle w-100 mb-1 mb-sm-0">
+                            <input type="checkbox" class="custom-control-input" id="rememberCheck13">
+                            <label class="custom-control-label" for="rememberCheck13">Employees</label>
                         </div>
-
-                        <div class="d-flex justify-content-sm-between justify-content-start align-items-center mb-3 flex-column flex-sm-row">
-                            <div class="custom-control custom-checkbox checkBoxStyle w-100 mb-1 mb-sm-0">
-                                <input type="checkbox" class="custom-control-input" id="rememberCheck15">
-                                <label class="custom-control-label" for="rememberCheck15">Stock Price</label>
-                            </div>
-                            <div class="customSelect w-100">
-                                <span class="selectStyle">
-                                    <span class="selectArrow"><img src="images/arrow-down.svg" alt="..."></span>
-                                    <select class="form-control">
-                                        <option value="" selected="">Max</option>
-                                        <option value="1">1</option>
-                                        <option value="2">2</option>
-                                    </select>
-                                </span>
-                            </div>
+                        <div class="customSelect w-100">
+                            <span class="selectStyle mr-2">
+                                <span class="selectArrow"><img src="images/arrow-down.svg" alt="..."></span>
+                                <select class="form-control">
+                                    <option value="" selected="">Min</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                </select>
+                            </span>
+                            <span class="selectStyle">
+                                <span class="selectArrow"><img src="images/arrow-down.svg" alt="..."></span>
+                                <select class="form-control">
+                                    <option value="" selected="">Max</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                </select>
+                            </span>
                         </div>
+                    </div>
 
-                        <div class="d-flex justify-content-sm-between justify-content-start align-items-center mb-3 flex-column flex-sm-row">
-                            <div class="custom-control custom-checkbox checkBoxStyle w-100 mb-1 mb-sm-0">
-                                <input type="checkbox" class="custom-control-input" id="rememberCheck16">
-                                <label class="custom-control-label" for="rememberCheck16">Credit Rating</label>
-                            </div>
-                            <div class="customSelect w-100">
-                                <span class="selectStyle">
-                                    <span class="selectArrow"><img src="images/arrow-down.svg" alt="..."></span>
-                                    <select class="form-control">
-                                        <option value="" selected="">Max</option>
-                                        <option value="1">1</option>
-                                        <option value="2">2</option>
-                                    </select>
-                                </span>
-                            </div>
+                    <div class="d-flex justify-content-sm-between justify-content-start align-items-center mb-3 flex-column flex-sm-row">
+                        <div class="custom-control custom-checkbox checkBoxStyle w-100 mb-1 mb-sm-0">
+                            <input type="checkbox" class="custom-control-input" id="rememberCheck14">
+                            <label class="custom-control-label" for="rememberCheck14">Financial Year</label>
+                        </div>
+                        <div class="customSelect w-100">
+                            <span class="selectStyle">
+                                <span class="selectArrow"><img src="images/arrow-down.svg" alt="..."></span>
+                                <select class="form-control">
+                                    <option value="" selected="">Max</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                </select>
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="d-flex justify-content-sm-between justify-content-start align-items-center mb-3 flex-column flex-sm-row">
+                        <div class="custom-control custom-checkbox checkBoxStyle w-100 mb-1 mb-sm-0">
+                            <input type="checkbox" class="custom-control-input" id="rememberCheck15">
+                            <label class="custom-control-label" for="rememberCheck15">Stock Price</label>
+                        </div>
+                        <div class="customSelect w-100">
+                            <span class="selectStyle">
+                                <span class="selectArrow"><img src="images/arrow-down.svg" alt="..."></span>
+                                <select class="form-control">
+                                    <option value="" selected="">Max</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                </select>
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="d-flex justify-content-sm-between justify-content-start align-items-center mb-3 flex-column flex-sm-row">
+                        <div class="custom-control custom-checkbox checkBoxStyle w-100 mb-1 mb-sm-0">
+                            <input type="checkbox" class="custom-control-input" id="rememberCheck16">
+                            <label class="custom-control-label" for="rememberCheck16">Credit Rating</label>
+                        </div>
+                        <div class="customSelect w-100">
+                            <span class="selectStyle">
+                                <span class="selectArrow"><img src="images/arrow-down.svg" alt="..."></span>
+                                <select class="form-control">
+                                    <option value="" selected="">Max</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                </select>
+                            </span>
                         </div>
                     </div>
                 </div>
+            </div>
 
-                <div class="col-md-12 col-lg-6 mb-4">
-                    <div class="configCard p-4">
-                        <div class="d-flex justify-content-between mb-3">
-                            <div class="configTitle">
-                                <h4>Technology</h4>
-                            </div>
-                            <button type="button" class="btn bg-white">Add Item</button>
+            <div class="col-md-12 col-lg-6 mb-4">
+                <div class="configCard p-4">
+                    <div class="d-flex justify-content-between mb-3">
+                        <div class="configTitle">
+                            <h4>Technology</h4>
                         </div>
-                        <div class="d-flex justify-content-sm-between justify-content-start align-items-center mb-3 flex-column flex-sm-row">
-                            <div class="custom-control custom-checkbox checkBoxStyle w-100 mb-1 mb-sm-0">
-                                <input type="checkbox" class="custom-control-input" id="rememberCheck17">
-                                <label class="custom-control-label" for="rememberCheck17">ERP</label>
-                            </div>
-                            <div class="customSelect w-100">
-                                <span class="selectStyle">
-                                    <span class="selectArrow"><img src="images/arrow-down.svg" alt="..."></span>
-                                    <select class="form-control">
-                                        <option value="" selected="">select</option>
-                                        <option value="1">1</option>
-                                        <option value="2">2</option>
-                                    </select>
-                                </span>
-                            </div>
+                        <button type="button" class="btn bg-white">Add Item</button>
+                    </div>
+                    <div class="d-flex justify-content-sm-between justify-content-start align-items-center mb-3 flex-column flex-sm-row">
+                        <div class="custom-control custom-checkbox checkBoxStyle w-100 mb-1 mb-sm-0">
+                            <input type="checkbox" class="custom-control-input" id="rememberCheck17">
+                            <label class="custom-control-label" for="rememberCheck17">ERP</label>
                         </div>
+                        <div class="customSelect w-100">
+                            <span class="selectStyle">
+                                <span class="selectArrow"><img src="images/arrow-down.svg" alt="..."></span>
+                                <select class="form-control">
+                                    <option value="" selected="">select</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                </select>
+                            </span>
+                        </div>
+                    </div>
 
-                        <div class="d-flex justify-content-sm-between justify-content-start align-items-center mb-3 flex-column flex-sm-row">
-                            <div class="custom-control custom-checkbox checkBoxStyle w-100 mb-1 mb-sm-0">
-                                <input type="checkbox" class="custom-control-input" id="rememberCheck18">
-                                <label class="custom-control-label" for="rememberCheck18">CRM</label>
-                            </div>
-                            <div class="customSelect w-100">
-                                <span class="selectStyle">
-                                    <span class="selectArrow"><img src="images/arrow-down.svg" alt="..."></span>
-                                    <select class="form-control">
-                                        <option value="" selected="">select</option>
-                                        <option value="1">1</option>
-                                        <option value="2">2</option>
-                                    </select>
-                                </span>
-                            </div>
+                    <div class="d-flex justify-content-sm-between justify-content-start align-items-center mb-3 flex-column flex-sm-row">
+                        <div class="custom-control custom-checkbox checkBoxStyle w-100 mb-1 mb-sm-0">
+                            <input type="checkbox" class="custom-control-input" id="rememberCheck18">
+                            <label class="custom-control-label" for="rememberCheck18">CRM</label>
                         </div>
-
-                        <div class="d-flex justify-content-sm-between justify-content-start align-items-center mb-3 flex-column flex-sm-row">
-                            <div class="custom-control custom-checkbox checkBoxStyle w-100 mb-1 mb-sm-0">
-                                <input type="checkbox" class="custom-control-input" id="rememberCheck19">
-                                <label class="custom-control-label" for="rememberCheck19">Financial</label>
-                            </div>
-                            <div class="customSelect w-100">
-                                <span class="selectStyle">
-                                    <span class="selectArrow"><img src="images/arrow-down.svg" alt="..."></span>
-                                    <select class="form-control">
-                                        <option value="" selected="">select</option>
-                                        <option value="1">1</option>
-                                        <option value="2">3</option>
-                                    </select>
-                                </span>
-                            </div>
+                        <div class="customSelect w-100">
+                            <span class="selectStyle">
+                                <span class="selectArrow"><img src="images/arrow-down.svg" alt="..."></span>
+                                <select class="form-control">
+                                    <option value="" selected="">select</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                </select>
+                            </span>
                         </div>
+                    </div>
 
-                        <div class="d-flex justify-content-sm-between justify-content-start align-items-center mb-3 flex-column flex-sm-row">
-                            <div class="custom-control custom-checkbox checkBoxStyle w-100 mb-1 mb-sm-0">
-                                <input type="checkbox" class="custom-control-input" id="rememberCheck20">
-                                <label class="custom-control-label" for="rememberCheck20">Distribution/WH</label>
-                            </div>
-                            <div class="customSelect w-100">
-                                <span class="selectStyle">
-                                    <span class="selectArrow"><img src="images/arrow-down.svg" alt="..."></span>
-                                    <select class="form-control">
-                                        <option value="" selected="">select</option>
-                                        <option value="1">1</option>
-                                        <option value="2">2</option>
-                                    </select>
-                                </span>
-                            </div>
+                    <div class="d-flex justify-content-sm-between justify-content-start align-items-center mb-3 flex-column flex-sm-row">
+                        <div class="custom-control custom-checkbox checkBoxStyle w-100 mb-1 mb-sm-0">
+                            <input type="checkbox" class="custom-control-input" id="rememberCheck19">
+                            <label class="custom-control-label" for="rememberCheck19">Financial</label>
                         </div>
-
-                        <div class="d-flex justify-content-sm-between justify-content-start align-items-center mb-3 flex-column flex-sm-row">
-                            <div class="custom-control custom-checkbox checkBoxStyle w-100 mb-1 mb-sm-0">
-                                <input type="checkbox" class="custom-control-input" id="rememberCheck21">
-                                <label class="custom-control-label" for="rememberCheck21">Help Desk</label>
-                            </div>
-                            <div class="customSelect w-100">
-                                <span class="selectStyle">
-                                    <span class="selectArrow"><img src="images/arrow-down.svg" alt="..."></span>
-                                    <select class="form-control">
-                                        <option value="" selected="">select</option>
-                                        <option value="1">1</option>
-                                        <option value="2">2</option>
-                                    </select>
-                                </span>
-                            </div>
+                        <div class="customSelect w-100">
+                            <span class="selectStyle">
+                                <span class="selectArrow"><img src="images/arrow-down.svg" alt="..."></span>
+                                <select class="form-control">
+                                    <option value="" selected="">select</option>
+                                    <option value="1">1</option>
+                                    <option value="2">3</option>
+                                </select>
+                            </span>
                         </div>
+                    </div>
 
-                        <div class="d-flex justify-content-sm-between justify-content-start align-items-center mb-3 flex-column flex-sm-row">
-                            <div class="custom-control custom-checkbox checkBoxStyle w-100 mb-1 mb-sm-0">
-                                <input type="checkbox" class="custom-control-input" id="rememberCheck22">
-                                <label class="custom-control-label" for="rememberCheck22">Database</label>
-                            </div>
-                            <div class="customSelect w-100">
-                                <span class="selectStyle">
-                                    <span class="selectArrow"><img src="images/arrow-down.svg" alt="..."></span>
-                                    <select class="form-control">
-                                        <option value="" selected="">select</option>
-                                        <option value="1">1</option>
-                                        <option value="2">2</option>
-                                    </select>
-                                </span>
-                            </div>
+                    <div class="d-flex justify-content-sm-between justify-content-start align-items-center mb-3 flex-column flex-sm-row">
+                        <div class="custom-control custom-checkbox checkBoxStyle w-100 mb-1 mb-sm-0">
+                            <input type="checkbox" class="custom-control-input" id="rememberCheck20">
+                            <label class="custom-control-label" for="rememberCheck20">Distribution/WH</label>
+                        </div>
+                        <div class="customSelect w-100">
+                            <span class="selectStyle">
+                                <span class="selectArrow"><img src="images/arrow-down.svg" alt="..."></span>
+                                <select class="form-control">
+                                    <option value="" selected="">select</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                </select>
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="d-flex justify-content-sm-between justify-content-start align-items-center mb-3 flex-column flex-sm-row">
+                        <div class="custom-control custom-checkbox checkBoxStyle w-100 mb-1 mb-sm-0">
+                            <input type="checkbox" class="custom-control-input" id="rememberCheck21">
+                            <label class="custom-control-label" for="rememberCheck21">Help Desk</label>
+                        </div>
+                        <div class="customSelect w-100">
+                            <span class="selectStyle">
+                                <span class="selectArrow"><img src="images/arrow-down.svg" alt="..."></span>
+                                <select class="form-control">
+                                    <option value="" selected="">select</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                </select>
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="d-flex justify-content-sm-between justify-content-start align-items-center mb-3 flex-column flex-sm-row">
+                        <div class="custom-control custom-checkbox checkBoxStyle w-100 mb-1 mb-sm-0">
+                            <input type="checkbox" class="custom-control-input" id="rememberCheck22">
+                            <label class="custom-control-label" for="rememberCheck22">Database</label>
+                        </div>
+                        <div class="customSelect w-100">
+                            <span class="selectStyle">
+                                <span class="selectArrow"><img src="images/arrow-down.svg" alt="..."></span>
+                                <select class="form-control">
+                                    <option value="" selected="">select</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                </select>
+                            </span>
                         </div>
                     </div>
                 </div>
