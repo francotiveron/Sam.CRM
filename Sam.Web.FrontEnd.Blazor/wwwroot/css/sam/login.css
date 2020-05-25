@@ -1,0 +1,183 @@
+﻿.loginBgCol {
+    background-image: url('../../images/bg-img.jpg');
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.loginBgCol:before {
+    position: absolute;
+    content: '';
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(17,34,64);
+    opacity: 0.80;
+}
+.custom-row {
+    height: 100%;
+    min-height: 100vh;
+}
+
+.logincol {
+    text-align: center;
+}
+.spacecol {
+    position: relative;
+    width: 100%;
+    padding: 70px;
+}
+.logo {
+    max-width: 159px;
+    margin: 0 auto;
+}
+.list-sec {
+    border: 1px solid #4d596e;
+    border-left: none;
+    border-right: none;
+    margin: 38px 55px 48px;
+}
+.mobliecol img {
+    max-width: 200px;
+}
+
+.loginForm {
+    margin: 0 auto;
+    padding: 30px 30px;
+    text-align: center;
+    max-width: 505px;
+}
+    .loginForm > span {
+        font-size: 10px;
+        font-weight: 500;
+        color: #c1c5d0;
+        word-spacing: 3px;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        display: block;
+        position: relative;
+        margin: 40px 0px;
+    }
+
+        .loginForm > span:after, .loginForm > span:before {
+            position: absolute;
+            content: '';
+            top: 50%;
+            bottom: 0;
+            width: 26%;
+            height: 2px;
+            background-color: #ddd;
+            transform: translateY(-50%);
+        }
+
+        .loginForm > span:after {
+            left: 0;
+        }
+
+        .loginForm > span:before {
+            right: 0;
+        }
+.formStyle {
+    text-align: left;
+    font-size: 15px;
+}
+.loginheadCol {
+    padding-bottom: 20px;
+}
+
+.loginheadCol > h2 {
+    font-size: 26px;
+    font-weight: 800;
+    color: #0e2243;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+.social-icon > ul > li {
+    display: inline-block;
+    margin: 0px 3px;
+    vertical-align: top;
+}
+
+    .social-icon > ul > li > a {
+        background-color: #fff;
+        border-radius: 50%;
+        display: flex;
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        justify-content: center;
+        box-shadow: 1px 6px 20px rgba(14,34,67,0.25);
+        transform: scale(0.9);
+        transition: all 300ms ease-in-out;
+        align-items: center;
+    }
+
+        .social-icon > ul > li > a:hover {
+            transform: scale(1.01);
+        }
+
+        .social-icon > ul > li > a > img {
+            width: 30px;
+            display: block;
+        }
+
+    .social-icon > ul > li.googleicon > a img {
+        width: 25px;
+    }
+.custom-control-label {
+    position: relative;
+    margin-bottom: 0;
+    vertical-align: top;
+    font-size: 12px;
+    font-weight: 600;
+    color: #2c344f;
+}
+    .custom-control-label::after {
+        position: absolute;
+        top: .25rem;
+        left: -1.5rem;
+        display: block;
+        width: 1rem;
+        height: 1rem;
+        content: "";
+        background: no-repeat 50%/50% 50%;
+    }
+.forgotPwdLink a {
+    color: #2542a6;
+    text-decoration: underline;
+    font-size: 12px;
+    font-weight: 600;
+}
+.btnStyle {
+    box-shadow: 0 5px 16px rgba(42, 29, 187, 0.2);
+    background: #f0164b;
+    background: -moz-linear-gradient(left, #f0164b 0%, #c70434 100%);
+    background: -webkit-linear-gradient(left, #f0164b 0%,#c70434 100%);
+    background: linear-gradient(to right, #f0164b 0%,#c70434 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f0164b', endColorstr='#c70434',GradientType=1 );
+    background-size: 200% auto;
+    background-position: center left;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 50px;
+    padding: 13px;
+    min-width: 106px;
+    -webkit-transition: all 300ms ease-in-out 0s;
+    -o-transition: all 300ms ease-in-out 0s;
+    transition: all 300ms ease-in-out 0s;
+    text-transform: uppercase;
+}
+.formStyle .btnStyle {
+    padding: 12px 20px;
+    box-shadow: 0px 9px 21px rgba(255,0,63,0.4);
+}
+.social-icon > ul > li > a.userCol > img {
+    border-radius: 50%;
+}

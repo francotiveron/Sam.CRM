@@ -4,9 +4,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Sam.Web.FrontEnd.Blazor.Pages
+namespace Sam.Web.FrontEnd.Blazor.Components
 {
-    public class PageBase : ComponentBase
+    public class SamComponentBase: ComponentBase
     {
     }
 }

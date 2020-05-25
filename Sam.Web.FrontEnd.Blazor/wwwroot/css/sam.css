@@ -1,0 +1,80 @@
+﻿@import "sam/login.css";
+@import "sam/sidebar.css";
+@import "sam/topbar.css";
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    /* background-color: #f7f9fb; */
+    background-color: #eef1f6;
+    position: relative;
+}
+#blazor-error-ui {
+    background: lightyellow;
+    bottom: 0;
+    box-shadow: 0 -1px 2px rgba(0, 0, 0, 0.2);
+    display: none;
+    left: 0;
+    padding: 0.6rem 1.25rem 0.7rem 1.25rem;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+#blazor-error-ui .dismiss {
+    cursor: pointer;
+    position: absolute;
+    right: 0.75rem;
+    top: 0.5rem;
+}
+
+img {
+    max-width: 100%;
+}
+.fldIcon > img {
+    width: 17px;
+}
+
+ul, li {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.contentsecinner {
+    padding: 30px 50px;
+}
+
+.app-content {
+    padding: 78px 0 78px 120px;
+    height: calc(100vh - 60px);
+    overflow-y: auto;
+}
+
+label.labelStyle {
+    color: #2c344f;
+    font-weight: 600;
+    font-size: 12px;
+}
+.rightIconFld {
+    position: relative;
+}
+
+.rightIconFld > .fldIcon {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    -webkit-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    pointer-events: none;
+}
+
+.formStyle .rightIconFld > .form-control {
+    padding-right: 50px;
+}
+
+.spacemargin {
+    margin: 25px 0px;
+}

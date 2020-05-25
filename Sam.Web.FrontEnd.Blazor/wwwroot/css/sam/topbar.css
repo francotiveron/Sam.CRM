@@ -1,0 +1,103 @@
+.sam-topbar {
+    background: #fff;
+    padding: 15px 15px 15px 120px; 
+
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 8;
+}
+
+
+.sam-topbar-menu > ul > li {
+    display: inline-block;
+    position: relative;
+}
+
+.sam-topbar-menu > ul > li > a > p {
+    margin: 0;
+    margin: 0;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.sam-topbar-menu ul li a p span {
+    display: block;
+    text-align: left;
+}
+
+.sam-topbar-menu ul li a p.userinfo span.username {
+    font-size: 15px;
+    font-weight: 600;
+    color: #0e2243;
+}
+
+.sam-topbar-menu ul li a p.userinfo span.lastactive {
+    font-weight: 500;
+    color: #b1bed4;
+    font-size: 11px;
+}
+
+.sam-topbar-menu > ul > li > a > p.userimg {
+    margin-right: 5px;
+}
+
+.sam-topbar-menu > ul > li + li {
+    margin-left: 30px;
+}
+
+.sam-topbar-menu > ul > li.usermenu > a {
+    display: block;
+    position: relative;
+    padding-right: 30px;
+}
+.usermenu .dropdown-item > img {
+    margin-right: 10px;
+}
+
+.sam-topbar-menu > ul > li.usermenu > a {
+    display: block;
+    position: relative;
+    padding-right: 30px;
+}
+
+.sam-topbar-menu > ul + ul {
+    margin-left: 55px;
+}
+
+.sam-topbar-menu > ul {
+    display: inline-block;
+}
+
+.sam-topbar-menu > ul > li > a {
+    color: #0e2244;
+    font-size: 14px;
+    font-weight: 600;
+    -webkit-transition: all 300ms ease-in-out;
+    -moz-transition: all 300ms ease-in-out;
+    transition: all 300ms ease-in-out;
+}
+
+.sam-topbar-menu ul li.active a, .sam-topbar-menu ul li:not(.expensemenu) a:hover {
+    color: #e40139;
+}
+
+.sam-topbar-menu ul li.homemenu a:hover svg path {
+    fill: #e40139;
+}
+
+.sam-topbar-menu ul li a.btn.btn-primary:hover {
+    color: #fff;
+}
+
+.sam-topbar-menu ul li.usermenu > a::before {
+    content: "";
+    content: "\f107";
+    right: 0;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    font-family: fontawesome;
+    color: #b0b0b0;
+    font-size: 20px;
+}

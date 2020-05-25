@@ -1,13 +1,16 @@
 ﻿@page "/pipeline/configure-icp"
+@using Sam.Web.FrontEnd.Blazor.Components
+
+@inherits SamPageBase
 
 <div class="contentsecinner">
     <div class="d-flex align-items-center justify-content-between flex-sm-row flex-column mt-2 mt-lg-0">
-        <div class="titlesec">
-            <h3 class="mb-2 mb-sm-0">Configure ICP</h3>
-        </div>
+        <PageTitle Text="Configure ICP"/>
         <div class="">
-            <button type="button" class="btn bg-white">Search</button>
-            <button type="button" class="btn bg-white">Add category</button>
+            @*            <button type="button" class="btn bg-white">Search</button>*@
+            <Button Text="Search" />
+            @*<button type="button" class="btn bg-white">Add category</button>*@
+            <Button Text="Add Category"/>
         </div>
     </div>
 
@@ -19,7 +22,8 @@
                         <div class="configTitle">
                             <h4>Background</h4>
                         </div>
-                        <button type="button" class="btn bg-white">Add Item</button>
+                        <Button Text="Add Item" />
+                        @*<button type="button" class="btn bg-white">Add Item</button>*@
                     </div>
                     <div class="d-flex justify-content-sm-between justify-content-start align-items-center mb-3 flex-column flex-sm-row">
                         <div class="custom-control custom-checkbox checkBoxStyle w-100 mb-1 mb-sm-0">

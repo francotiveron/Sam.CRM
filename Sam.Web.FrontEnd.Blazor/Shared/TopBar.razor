@@ -1,0 +1,162 @@
+﻿@inject NavigationManager _uriHelper
+
+<div class="sam-topbar">
+    <div class="container-fluid">
+        <div class="form-row align-items-center justify-content-center">
+            <div class="col-auto d-lg-none align-self-center">
+                <div class="form-row align-items-center">
+                    <div class="col-auto">
+                        <div>
+                            <a href="meeting-preparation.html"><img src="images/logoblue.png" alt="Logo"></a>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div @onclick="ToggleNavMenu">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                @Title
+            </div>
+            <div class="col" style="margin-right:60px">
+                <div class="sam-topbar-menu text-right">
+
+                    <div class="d-none d-lg-inline-block mr-3">
+                        <div class="mx-1 d-none d-lg-inline-block"><button type="button" class="btn bg-white">+ Client</button></div>
+                        <div class="mx-1 d-none d-lg-inline-block"><button type="button" class="btn bg-white">+ Meeting</button></div>
+                        <div class="mx-1 d-none d-lg-inline-block"><button type="button" class="btn bg-white">CRM SYNC</button></div>
+                    </div>
+
+                    <ul>
+                        <li>
+                            <a href="javascript:void(0)">
+                                <img width="24" src="images/search.svg" alt="">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)">
+                                <img width="24" src="images/settings.svg" alt="">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)">
+                                <img width="24" src="images/notification.svg" alt="">
+                                <span class="badge badge-danger">2</span>
+                            </a>
+                        </li>
+
+                        @*<li class="usermenu">
+                                <a href="javascript:void(0)">
+                                    <p class="userimg"><img src="images/userimg.jpg" alt=""></p>
+                                    <p class="userinfo">
+                                        <span>
+                                            <a href="/myprofile">@User?.Fullname</a>
+                                            <EjsMenu @ref="Menu" Items="@MenuItems" Fields="@MenuFields" ShowItemOnClick="true">
+                                                <MenuEvents ItemSelected="itemSelected" />
+                                            </EjsMenu>
+                                        </span>
+
+                                        <span class="lastactive">@User?.LastLogin</span>
+                                    </p>
+                                </a>
+
+                            </li>*@
+
+                        @*<li class="usermenu">
+                               <img class="user-image" src="images/userimg.jpg" alt="">
+                                <span>
+                                    <a href="/myprofile">User?.Fullname</a>
+                                    <a href="/myprofile">Menu</a>
+                                </span>
+                                <span class="lastactive">User?.LastLogin</span>
+                            </li>*@
+
+                        @*<li class="usermenu ml-0 ml-lg-5">
+                                <a href="javascript:void(0)">
+                                    <p ><img class="user-image" src="images/Rupak.jpg" alt=""></p>
+                                    <p class="userinfo">
+                                        <span class="username">Rupak Chatterjee</span>
+                                        <span class="lastactive">Last Login 20 / 10 / 2020</span>
+                                    </p>
+                                </a>
+                                <div class="dropdownCol">
+                                    <ul>
+                                        <li>
+                                            <a href="javascript:void(0)" class="dropdown-item"><img src="images/key.svg" alt="...">Passwords</a>
+                                        </li>
+                                        <li>
+                                            <a href="login.html" class="dropdown-item"><img src="images/logout.svg" width="12" height="12" alt="...">Log out</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0)" class="dropdown-item"><img src="images/call.svg" width="12" height="12" alt="...">Contact</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>*@
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@code
+{
+    private bool collapseNavMenu = true;
+
+    private string NavMenuCssClass => collapseNavMenu ? "collapse" : null;
+
+    private void ToggleNavMenu()
+    {
+        collapseNavMenu = !collapseNavMenu;
+    }
+    [Parameter] public string Title { get; set; }
+    //[Parameter] public IUserLoginResponse User { get; set; }
+
+    //EjsMenu Menu;
+
+    List<object> MenuItems = new List<object>
+{
+        new
+        {
+            header = " ",
+                    subItems = new List<object>() {
+                        new { text= "My Profile" },
+                        new { text= "Change Password" },
+                        new { text= "Logout" }
+                    }
+        }
+    };
+
+    //public MenuFieldSettings MenuFields = new MenuFieldSettings()
+    //{
+    //    IconCss = "icon",
+    //    Text = new string[] { "header", "text", "value" },
+    //    Children = new string[] { "subItems", "options" }
+    //};
+
+    //private void itemSelected(MenuEventArgs arg)
+    //{
+    //    if (arg.Item.Text == "My Profile")
+    //    {
+    //        _uriHelper.NavigateTo("/myprofile");
+    //    }
+
+    //    if (arg.Item.Text == "Logout")
+    //    {
+    //        _uriHelper.NavigateTo("/login");
+    //    }
+
+    //    if (arg.Item.Text == "Change Password")
+    //    {
+    //        _uriHelper.NavigateTo("/changepassword");
+    //    }
+    //}
+
+}
