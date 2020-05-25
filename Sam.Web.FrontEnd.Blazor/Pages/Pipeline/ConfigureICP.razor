@@ -3,7 +3,7 @@
 
 @inherits SamPageBase
 
-<div class="contentsecinner">
+<div class="sam-content-inner">
     <div class="d-flex align-items-center justify-content-between flex-sm-row flex-column mt-2 mt-lg-0">
         <PageTitle Text="Configure ICP"/>
         <div class="">
@@ -23,24 +23,11 @@
                             <h4>Background</h4>
                         </div>
                         <Button Text="Add Item" />
-                        @*<button type="button" class="btn bg-white">Add Item</button>*@
                     </div>
-                    <div class="d-flex justify-content-sm-between justify-content-start align-items-center mb-3 flex-column flex-sm-row">
-                        <div class="custom-control custom-checkbox checkBoxStyle w-100 mb-1 mb-sm-0">
-                            <input type="checkbox" class="custom-control-input" id="rememberCheck1">
-                            <label class="custom-control-label" for="rememberCheck1">Country</label>
-                        </div>
-                        <div class="customSelect w-100">
-                            <span class="selectStyle">
-                                <span class="selectArrow"><img src="images/arrow-down.svg" alt="..."></span>
-                                <select class="form-control">
-                                    <option value="" selected="">select</option>
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                </select>
-                            </span>
-                        </div>
-                    </div>
+                    <EntryRow>
+                        <CheckBox />
+                        <DropDown />
+                    </EntryRow>
 
                     <div class="d-flex justify-content-sm-between justify-content-start align-items-center mb-3 flex-column flex-sm-row">
                         <div class="custom-control custom-checkbox checkBoxStyle w-100 mb-1 mb-sm-0">
@@ -119,7 +106,13 @@
                         </div>
                         <button type="button" class="btn bg-white">Add Item</button>
                     </div>
-                    <div class="d-flex justify-content-sm-between justify-content-start align-items-center mb-3 flex-column flex-sm-row">
+                    <EntryRow>
+                        <CheckBox />
+                        <DropDown />
+                        <DropDown />
+                    </EntryRow>
+
+                    @*<div class="d-flex justify-content-sm-between justify-content-start align-items-center mb-3 flex-column flex-sm-row">
                         <div class="custom-control custom-checkbox checkBoxStyle w-100 mb-1 mb-sm-0">
                             <input type="checkbox" class="custom-control-input" id="rememberCheck6">
                             <label class="custom-control-label" for="rememberCheck6">NPS Score</label>
@@ -142,7 +135,7 @@
                                 </select>
                             </span>
                         </div>
-                    </div>
+                    </div>*@
 
                     <div class="d-flex justify-content-sm-between justify-content-start align-items-center mb-3 flex-column flex-sm-row">
                         <div class="custom-control custom-checkbox checkBoxStyle w-100 mb-1 mb-sm-0">

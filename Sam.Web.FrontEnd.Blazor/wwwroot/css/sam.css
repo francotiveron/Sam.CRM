@@ -2,6 +2,7 @@
 @import "sam/sidebar.css";
 @import "sam/topbar.css";
 
+/*HTML*/
 body {
     margin: 0;
     padding: 0;
@@ -10,6 +11,19 @@ body {
     background-color: #eef1f6;
     position: relative;
 }
+
+img {
+    max-width: 100%;
+}
+
+ul, li {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+
+/*Named*/
 #blazor-error-ui {
     background: lightyellow;
     bottom: 0;
@@ -29,52 +43,34 @@ body {
     top: 0.5rem;
 }
 
-img {
-    max-width: 100%;
+/*Classes*/
+.sam-right-field-icon {
+    position: relative;
 }
-.fldIcon > img {
+.sam-field-icon {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translate(0, -50%);
+    pointer-events: none;
+}
+.sam-field-icon > img {
     width: 17px;
 }
 
-ul, li {
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-}
-
-.contentsecinner {
-    padding: 30px 50px;
-}
-
-.app-content {
+.sam-content {
     padding: 78px 0 78px 120px;
     height: calc(100vh - 60px);
     overflow-y: auto;
 }
 
-label.labelStyle {
+.sam-content-inner {
+    padding: 30px 50px;
+}
+
+sam-label-style {
     color: #2c344f;
     font-weight: 600;
     font-size: 12px;
 }
-.rightIconFld {
-    position: relative;
-}
 
-.rightIconFld > .fldIcon {
-    position: absolute;
-    right: 20px;
-    top: 50%;
-    -webkit-transform: translate(0, -50%);
-    -ms-transform: translate(0, -50%);
-    transform: translate(0, -50%);
-    pointer-events: none;
-}
-
-.formStyle .rightIconFld > .form-control {
-    padding-right: 50px;
-}
-
-.spacemargin {
-    margin: 25px 0px;
-}
