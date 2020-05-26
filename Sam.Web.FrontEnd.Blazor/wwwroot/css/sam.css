@@ -59,13 +59,13 @@ ul, li {
 }
 
 .sam-content {
-    padding: 78px 0 78px 120px;
+    padding: 78px 0 78px 100px;
     height: calc(100vh - 60px);
     overflow-y: auto;
 }
 
 .sam-content-inner {
-    padding: 30px 50px;
+    padding: 50px 50px;
 }
 
 .sam-label-style {
@@ -81,7 +81,6 @@ ul, li {
 
 .sam-dropdown {
     display: flex;
-    flex: 2;
 }
 
 .sam-dropdown > span {
@@ -89,8 +88,14 @@ ul, li {
     width: 100%;
 }
 
-.sam-dropdown > span > span {
-    right: 12px;
+.sam-dropdown > span > select {
+    background: #fff;
+    border: 1px solid #e7eaef;
+    border-radius: 6px;
+    height: 52px;
+    text-transform: capitalize;
+    padding: 5px 25px 5px 18px;
+    width: 100%;
 }
 
 .selectArrow {

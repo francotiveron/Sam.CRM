@@ -1,7 +1,8 @@
 ﻿<div class="custom-control custom-checkbox w-100 mb-1 mb-sm-0">
     <input type="checkbox" class="custom-control-input" id="rememberCheck1">
-    <label class="custom-control-label" for="rememberCheck1">Country</label>
+    <label class="custom-control-label" for="rememberCheck1">@Text</label>
 </div>
 
 @code {
+    [Parameter] public string Text { get; set; }
 }
