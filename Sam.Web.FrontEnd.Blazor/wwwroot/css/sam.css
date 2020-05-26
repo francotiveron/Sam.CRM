@@ -112,38 +112,26 @@ ul, li {
     pointer-events: none;
 }
 
-.form-control {
-    background: #fff;
-    border: 1px solid #e7eaef;
-    border-radius: 6px;
-    height: 52px;
-    text-transform: capitalize;
-    padding: 5px 25px 5px 18px;
-    width: 100%;
-}
 
-.selectStyle {
-    max-width: 100%;
-    width: 100%;
-    position: relative;
-    display: block;
-    text-align: right;
-}
-
-.titlesec h3 {
+.sam-title h3 {
     padding-bottom: 20px;
     color: #2a3547;
     font-size: 20px;
     font-weight: 600;
 }
 
-.filtersec {
-    background-color: #fff;
-    padding: 17px 25px;
-    border-radius: 5px;
-    box-shadow: 0px 8px 20px rgba(232,234,236,1);
+
+
+.sam-table thead tr {
+    border: 0;
+    text-align: left;
 }
 
-.filtersec td{
+.sam-table td{
+    border: 0;
     text-align: left;
+}
+
+.sam-table tr {
+    border-top: 6.5px solid rgba(163,163,163,0.1);
 }

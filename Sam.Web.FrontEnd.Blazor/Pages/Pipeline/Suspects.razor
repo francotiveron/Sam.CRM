@@ -1,125 +1,39 @@
 ﻿@page "/pipeline/suspects"
+@using Sam.Web.FrontEnd.Blazor.Components
 
+@inherits SamPageBase
 <div class="sam-content-inner">
+    <PageTitle Text="Suspects" /><br />
     <div class="d-flex align-items-center justify-content-between flex-sm-row flex-column mt-2 mt-lg-0">
-        <div class="titlesec">
+        <div class="sam-title">
             <h3 class="mb-2 mb-sm-0" style="padding-bottom:20px;">Filter</h3>
         </div>
     </div>
-    <div class="d-flex align-items-center justify-content-between flex-sm-row flex-column mt-2 mt-lg-0">
-        <div class="customSelect w-100">
-            <span class="selectStyle">
-                <span class="selectArrow"><img src="images/arrow-down.svg" alt="..."></span>
-                <select class="form-control">
-                    <option value="" selected="">Countries</option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                </select>
-            </span>
-        </div>
-        <div class="customSelect w-100">
-            <span class="selectStyle">
-                <span class="selectArrow"><img src="images/arrow-down.svg" alt="..."></span>
-                <select class="form-control">
-                    <option value="" selected="">Industries</option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                </select>
-            </span>
-        </div>
-        <div class="customSelect w-100">
-            <span class="selectStyle">
-                <span class="selectArrow"><img src="images/arrow-down.svg" alt="..."></span>
-                <select class="form-control">
-                    <option value="" selected="">Creadit Rating</option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                </select>
-            </span>
-        </div>
-        <div class="customSelect w-100">
-            <span class="selectStyle">
-                <span class="selectArrow"><img src="images/arrow-down.svg" alt="..."></span>
-                <select class="form-control">
-                    <option value="" selected="">LinkedIn Followers</option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                </select>
-            </span>
-        </div>
-        <div class="customSelect w-100">
-            <span class="selectStyle">
-                <span class="selectArrow"><img src="images/arrow-down.svg" alt="..."></span>
-                <select class="form-control">
-                    <option value="" selected="">Applications</option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                </select>
-            </span>
-        </div>
-    </div>
+   
+   <EntryRow>
+        <DropDown Text="Countries"/>
+        <DropDown Text="Industries"/>
+        <DropDown Text="Credit Rating"/>
+        <DropDown Text="Linkedin Followers"/>
+        <DropDown Text="Applications"/>
+    </EntryRow>
 
+    <EntryRow>
+        <DropDown Text="Revenue Min"/>
+        <DropDown Text="Revenue Max"/>
+        <DropDown Text="Employee Min"/>
+        <DropDown Text="Employee Max"/>
+        <DropDown Text="Valuation Min"/>
+    </EntryRow>
+    <br />
+    
     <div class="d-flex align-items-center justify-content-between flex-sm-row flex-column mt-2 mt-lg-0">
-        <div class="customSelect w-100">
-            <span class="selectStyle">
-                <span class="selectArrow"><img src="images/arrow-down.svg" alt="..."></span>
-                <select class="form-control">
-                    <option value="" selected="">Revenue Min</option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                </select>
-            </span>
-        </div>
-        <div class="customSelect w-100">
-            <span class="selectStyle">
-                <span class="selectArrow"><img src="images/arrow-down.svg" alt="..."></span>
-                <select class="form-control">
-                    <option value="" selected="">Revenue Max</option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                </select>
-            </span>
-        </div>
-        <div class="customSelect w-100">
-            <span class="selectStyle">
-                <span class="selectArrow"><img src="images/arrow-down.svg" alt="..."></span>
-                <select class="form-control">
-                    <option value="" selected="">Employee Min</option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                </select>
-            </span>
-        </div>
-        <div class="customSelect w-100">
-            <span class="selectStyle">
-                <span class="selectArrow"><img src="images/arrow-down.svg" alt="..."></span>
-                <select class="form-control">
-                    <option value="" selected="">Employee Max</option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                </select>
-            </span>
-        </div>
-        <div class="customSelect w-100">
-            <span class="selectStyle">
-                <span class="selectArrow"><img src="images/arrow-down.svg" alt="..."></span>
-                <select class="form-control">
-                    <option value="" selected="">Valutaion Min</option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                </select>
-            </span>
+        <div class="sam-title">
+            <h3 class="mb-2 mb-sm-0" style="padding-top:20px;">Results</h3>
         </div>
     </div>
-    <div class="d-flex align-items-center justify-content-between flex-sm-row flex-column mt-2 mt-lg-0">
-        <div class="titlesec">
-            <h3 class="mb-2 mb-sm-0" style="padding-top:20px;">Suspects</h3>
-        </div>
-    </div>
-    <div class="filtersec" style="margin-top:20px;">
-        <div class="filtersecInn">
-            <div class="tablecstm meetingpreparation table-responsive-md spaceLess">
-                <table class="table footable">
+    <div class="sam-input-group p-4" style="margin-top:20px;">
+                <table class="sam-table table footable">
                     <thead>
                         <tr>
                             <th width="160" align="center">Company Name<img src="images/arrow-down.svg" alt="..." style="padding-left:1px;"></th>
@@ -140,15 +54,7 @@
                             <td>CRM</td>
                             <td>99%</td>
                             <td>
-                                <span class="selectStyle">
-                                    <span class="selectArrow"><img src="images/arrow-down.svg" alt="..."></span>
-                                    <select class="form-control">
-                                        <option value="" selected="">select</option>
-                                        <option value="1">Rupak C</option>
-                                        <option value="2">Roger</option>
-                                        <option value="2">Julian</option>
-                                    </select>
-                                </span>
+                                <DropDown Text="Select"/>
                             </td>
                         </tr>
                         <tr>
@@ -159,15 +65,7 @@
                             <td>CRM</td>
                             <td>98%</td>
                             <td>
-                                <span class="selectStyle">
-                                    <span class="selectArrow"><img src="images/arrow-down.svg" alt="..."></span>
-                                    <select class="form-control">
-                                        <option value="" selected="">select</option>
-                                        <option value="1">Rupak C</option>
-                                        <option value="2">Roger</option>
-                                        <option value="2">Julian</option>
-                                    </select>
-                                </span>
+                                <DropDown Text="Select"/>
                             </td>
                         </tr>
                         <tr>
@@ -178,23 +76,13 @@
                             <td>Internet</td>
                             <td>87%</td>
                             <td>
-                                <span class="selectStyle">
-                                    <span class="selectArrow"><img src="images/arrow-down.svg" alt="..."></span>
-                                    <select class="form-control">
-                                        <option value="" selected="">select</option>
-                                        <option value="1">Rupak C</option>
-                                        <option value="2">Roger</option>
-                                        <option value="2">Julian</option>
-                                    </select>
-                                </span>
+                                <DropDown Text="Select"/>
                             </td>
                         </tr>
                     </tbody>
                 </table>
             </div>
         </div>
-    </div>
-</div>
 
 @code {
 
