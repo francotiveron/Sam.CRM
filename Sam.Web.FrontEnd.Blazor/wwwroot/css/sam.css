@@ -68,9 +68,31 @@ ul, li {
     padding: 30px 50px;
 }
 
-sam-label-style {
+.sam-label-style {
     color: #2c344f;
     font-weight: 600;
     font-size: 12px;
 }
+
+.sam-input-group {
+    background: #fafafc;
+    border-radius: 8px;
+}
+
+.sam-dropdown {
+    display: flex;
+    flex: 2;
+}
+
+.sam-dropdown > span {
+    max-width: 100%;
+    width: 100%;
+}
+
+.sam-dropdown > span > span {
+    right: 12px;
+}
+
+
+
 
