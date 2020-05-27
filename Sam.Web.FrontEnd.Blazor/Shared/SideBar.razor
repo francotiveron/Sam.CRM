@@ -1,5 +1,4 @@
-﻿
-<div class="sam-sidebar">
+﻿<div class="sam-sidebar" @onmouseover="()=>expandSubNav = !expandSubNav">
     <div class="sam-sidebar-mainlogo d-lg-block d-none">
         <a href="/">
             <img src="images/logoblue.png" alt="Logo">
@@ -56,3 +55,18 @@
         </li>
     </ul>
 </div>
+
+@if (expandSubNav)
+{
+    <ul class="sam-sidebar submenu" style=" padding-top: 40px; ">
+        <li style="padding-top:0;"><h4>Pipeline</h4></li>
+        <li><a href="javascript:void(0)">Configure ICP</a></li>
+        <li><a href="javascript:void(0)">Suspects</a></li>
+    </ul>
+}
+
+@code {
+
+    private bool expandSubNav;
+
+}
