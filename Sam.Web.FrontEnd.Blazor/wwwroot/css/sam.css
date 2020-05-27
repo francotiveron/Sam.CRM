@@ -111,17 +111,12 @@ ul, li {
     z-index: 1;
     pointer-events: none;
 }
-
-
 .sam-title h3 {
     padding-bottom: 20px;
     color: #2a3547;
     font-size: 20px;
     font-weight: 600;
 }
-
-
-
 .sam-table thead tr {
     border: 0;
     text-align: left;
@@ -132,6 +127,13 @@ ul, li {
     text-align: left;
 }
 
-.sam-table tr {
+.sam-table tr{
     border-top: 6.5px solid rgba(163,163,163,0.1);
+}
+
+.sam-content-inner button {
+    border: 1px solid #e7eaef;
+    border-radius: 6px;
+    height: 43px;
+    padding: .375rem 1.1rem;
 }
