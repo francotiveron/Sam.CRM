@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using Sam.Web.FrontEnd.Blazor.Services;
 
 namespace Sam.Web.FrontEnd.Blazor
 {
@@ -18,6 +19,7 @@ namespace Sam.Web.FrontEnd.Blazor
             builder.RootComponents.Add<App>("app");
 
             builder.Services.AddTransient(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
+            builder.Services.AddSingleton<ISamDataService, SamDataService>();
 
             await builder.Build().RunAsync();
         }

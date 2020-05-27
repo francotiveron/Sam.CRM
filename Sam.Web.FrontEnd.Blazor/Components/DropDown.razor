@@ -1,15 +1,26 @@
-﻿<span class="@Class">
-    <select>
-        <option value="" selected="">@Text</option>
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="1">3</option>
-        <option value="4">4</option>
+﻿@using DTO
+
+<span class="@Class">
+    <select @onchange="OnChange">
+        @if (Selectables != null)
+        {
+            @foreach (var item in Selectables)
+            {
+                <option value="@item.id">@item.val</option>
+            }
+        }
     </select>
 </span>
 
 
 @code {
-    [Parameter] public string Text { get; set; }
     [Parameter] public string Class { get; set; }
+    [Parameter] public string Selected { get; set; }
+    [Parameter] public EventCallback<string> SelectedChanged { get; set; }
+    [Parameter] public IEnumerable<(string id, string val)> Selectables { get; set; }
+
+    async Task OnChange(ChangeEventArgs e)
+    {
+        await SelectedChanged.InvokeAsync(e.Value as string);
+    }
 }
