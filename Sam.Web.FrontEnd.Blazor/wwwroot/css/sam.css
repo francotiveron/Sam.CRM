@@ -137,3 +137,46 @@ ul, li {
     height: 43px;
     padding: .375rem 1.1rem;
 }
+
+.submenu {
+    display: block;
+    position: absolute;
+    background: #fafafc;
+    color: #0f2443;
+    height: 100vh;
+    top: 78px;
+    bottom: 0;
+    right: auto;
+    left: 100px;
+    width: 260px;
+    flex-wrap: wrap;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+    overflow-y: auto;
+}
+
+    .submenu li {
+        text-align: left;
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: 14px;
+        border-bottom: 1px solid #f0f1f3;
+        position: static;
+        padding-bottom: 22px;
+        padding-top: 22px;
+    }
+    .submenu h4 {
+        font-weight: 600;
+        margin: 6px 0;
+        text-transform: capitalize;
+        padding-left: 25px;
+    }
+
+    .submenu li a {
+        background: inherit;
+        padding: 0;
+        text-align: left;
+        padding: 25px 35px;
+    }
+
