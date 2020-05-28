@@ -93,20 +93,20 @@
 
 @if (shownote)
 {
-<SideBarSubMenu Title="Meeting Notes">
-    <li> <a href="javascript:void(0)" @onclick="@(() => GoTo("/meetingnotes/ap"))">Action Points</a> </li>
-    <li> <a href="javascript:void(0)" @onclick="@(() => GoTo("/meetingnotes/notes"))">Notes</a> </li>
-    <li> <a href="javascript:void(0)" @onclick="@(() => GoTo("/meetingnotes/sow"))">SOW</a> </li>
-    <li> <a href="javascript:void(0)" @onclick="@(() => GoTo("/meetingnotes/impact"))">IMPACT</a> </li>
-    <li> <a href="javascript:void(0)" @onclick="@(() => GoTo("/meetingnotes/needs"))">NEEDS</a> </li>
-</SideBarSubMenu>
+    <SideBarSubMenu Title="Meeting Notes">
+        <li> <a href="javascript:void(0)" @onclick="@(() => GoTo("/meetingnotes/ap"))">Action Points</a> </li>
+        <li> <a href="javascript:void(0)" @onclick="@(() => GoTo("/meetingnotes/notes"))">Notes</a> </li>
+        <li> <a href="javascript:void(0)" @onclick="@(() => GoTo("/meetingnotes/sow"))">SOW</a> </li>
+        <li> <a href="javascript:void(0)" @onclick="@(() => GoTo("/meetingnotes/impact"))">IMPACT</a> </li>
+        <li> <a href="javascript:void(0)" @onclick="@(() => GoTo("/meetingnotes/needs"))">NEEDS</a> </li>
+    </SideBarSubMenu>
 }
 
 @code {
     bool showpipeline;
     bool showprep;
     bool shownote;
-    
+
     void Show(string what, bool? show = null)
     {
         var pi = GetType().GetField($"show{what}", BindingFlags.NonPublic | BindingFlags.Instance);

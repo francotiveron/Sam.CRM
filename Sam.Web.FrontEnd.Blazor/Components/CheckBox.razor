@@ -4,7 +4,6 @@
 </div>
 
 @code {
-    [Parameter] public string Id { get; set; }
     [Parameter] public string Text { get; set; }
     [Parameter] public string Id { get; set; }
     [Parameter] public bool Checked { get; set; }
@@ -12,6 +11,5 @@
 
     bool _Checked { get => Checked; set => Task.Run(async () => await UpdateChanged(value)); }
     async Task UpdateChanged(bool value) => await CheckedChanged.InvokeAsync(value);
-
 
 }

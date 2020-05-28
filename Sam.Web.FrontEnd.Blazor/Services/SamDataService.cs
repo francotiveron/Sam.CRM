@@ -11,7 +11,7 @@ namespace Sam.Web.FrontEnd.Blazor.Services
 {
     public interface ISamDataService
     {
-        IEnumerable<Country> Countries { get; }
+        Task<IEnumerable<Country>> GetCountries();
 
         IEnumerable<Location> Locations { get; }
 
@@ -78,8 +78,6 @@ namespace Sam.Web.FrontEnd.Blazor.Services
         public static Dbase[] _Dbases = new Dbase[] { new Dbase("DBase"), new Dbase("Oracle"), new Dbase("IBM"), new Dbase("Sybase") };
 
 
-        IEnumerable<Country> ISamDataService.Countries => _Countries;
-
         IEnumerable<Location> ISamDataService.Locations => _Locations;
 
         IEnumerable<Industry> ISamDataService.Industries => _Industries;
@@ -109,7 +107,6 @@ namespace Sam.Web.FrontEnd.Blazor.Services
         IEnumerable<Hlpdsk> ISamDataService.Hlpdsks => _Hlpdsks;
 
         IEnumerable<Dbase> ISamDataService.Dbases => _Dbases;
-    }
         async Task<IEnumerable<Country>> ISamDataService.GetCountries() => await Task.Run(() => _Countries);
     }
 
@@ -120,7 +117,37 @@ namespace Sam.Web.FrontEnd.Blazor.Services
         readonly string baseUrl;
         static readonly string countryUrl = @"Country";
         HttpClient hc;
-        
+
+        public IEnumerable<Location> Locations => throw new NotImplementedException();
+
+        public IEnumerable<Industry> Industries => throw new NotImplementedException();
+
+        public IEnumerable<Bmodel> Bmodels => throw new NotImplementedException();
+
+        public IEnumerable<Yrsestd> Yrsestds => throw new NotImplementedException();
+
+        public IEnumerable<Minvl> Minvls => throw new NotImplementedException();
+
+        public IEnumerable<Maxvl> Maxvls => throw new NotImplementedException();
+
+        public IEnumerable<Fncyear> Fncyears => throw new NotImplementedException();
+
+        public IEnumerable<Stkprice> Stkprices => throw new NotImplementedException();
+
+        public IEnumerable<Crdrtn> Crdrtns => throw new NotImplementedException();
+
+        public IEnumerable<Erp> Erps => throw new NotImplementedException();
+
+        public IEnumerable<Crm> Crms => throw new NotImplementedException();
+
+        public IEnumerable<Fncltool> Fncltools => throw new NotImplementedException();
+
+        public IEnumerable<Dstwh> Dstwhs => throw new NotImplementedException();
+
+        public IEnumerable<Hlpdsk> Hlpdsks => throw new NotImplementedException();
+
+        public IEnumerable<Dbase> Dbases => throw new NotImplementedException();
+
         public SamDataServiceRemote(HttpClient httpClient, IWebAssemblyHostEnvironment env) { 
             hc = httpClient;
             if (env.IsProduction()) baseUrl = baseProdUrl;
