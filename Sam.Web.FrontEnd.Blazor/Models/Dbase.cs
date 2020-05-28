@@ -5,8 +5,8 @@ using System.Threading.Tasks;
 
 namespace Sam.Web.FrontEnd.Blazor.Models
 {
-    public class Country : DataItem
+    public class Dbase : DataItem
     {
-        public Country(string name) : base(name) { }
+        public Dbase(string name) : base(name) { }
     }
 }

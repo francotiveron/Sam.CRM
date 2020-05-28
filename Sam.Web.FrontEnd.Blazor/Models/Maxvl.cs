@@ -5,8 +5,8 @@ using System.Threading.Tasks;
 
 namespace Sam.Web.FrontEnd.Blazor.Models
 {
-    public class Country : DataItem
+    public class Maxvl : DataItem
     {
-        public Country(string name) : base(name) { }
+        public Maxvl (string name) : base(name) { }
     }
 }

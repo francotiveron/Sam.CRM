@@ -27,43 +27,42 @@
                             <h4>Background</h4>
                         </div>
                         <Button Text="Add Item" />
-                        <button Text="Pippo" @onclick="PrintModel" />
                     </div>
 
                     <EntryRow>
-                        <CheckBox Text="Country" @bind-Checked="model.WithCountry" />
+                        <CheckBox Text="Country" @bind-Checked="model.WithCountry" Id="chkCnyId" />
                         <DropDownGroup>
                             <DropDown Selectables="@(Countries.Select(country => (country.Id, country.Name)))" @bind-Selected="@model.CountryId" />
                         </DropDownGroup>
                     </EntryRow>
 
-                    @*<EntryRow>
-                            <CheckBox Text="Location" />
-                            <DropDownGroup>
-                                <DropDown Text="Select" />
-                            </DropDownGroup>
-                        </EntryRow>
+                    <EntryRow>
+                        <CheckBox Text="Location" @bind-Checked="model.WithLocation" Id="chkLctId" />
+                        <DropDownGroup>
+                            <DropDown Selectables="@(Locations.Select(location => (location.Id, location.Name)))" @bind-Selected="@model.LocationId" />
+                        </DropDownGroup>
+                    </EntryRow>
 
-                        <EntryRow>
-                            <CheckBox Text="Industry" />
-                            <DropDownGroup>
-                                <DropDown Text="Select" />
-                            </DropDownGroup>
-                        </EntryRow>
+                    <EntryRow>
+                        <CheckBox Text="Industry" @bind-Checked="model.WithIndustry" Id="chkIdsId" />
+                        <DropDownGroup>
+                            <DropDown Selectables="@(Industries.Select(industry => (industry.Id, industry.Name)))" @bind-Selected="@model.IndustryId" />
+                        </DropDownGroup>
+                    </EntryRow>
 
-                        <EntryRow>
-                            <CheckBox Text="Business Model" />
-                            <DropDownGroup>
-                                <DropDown Text="Select" />
-                            </DropDownGroup>
-                        </EntryRow>
+                    <EntryRow>
+                        <CheckBox Text="Business Model" @bind-Checked="model.WithBmodel" Id="chkBmdId" />
+                        <DropDownGroup>
+                            <DropDown Selectables="@(Bmodels.Select(bmodel => (bmodel.Id, bmodel.Name)))" @bind-Selected="@model.BmodelId" />
+                        </DropDownGroup>
+                    </EntryRow>
 
-                        <EntryRow>
-                            <CheckBox Text="Years Established" />
-                            <DropDownGroup>
-                                <DropDown Text="Select" />
-                            </DropDownGroup>
-                        </EntryRow>*@
+                    <EntryRow>
+                        <CheckBox Text="Years Established" @bind-Checked="model.WithYrsestd" Id="chkYetdId" />
+                        <DropDownGroup>
+                            <DropDown Selectables="@(Yrsestds.Select(yrsestd => (yrsestd.Id, yrsestd.Name)))" @bind-Selected="@model.YrsestdId" />
+                        </DropDownGroup>
+                    </EntryRow>
                 </div>
             </div>
 
@@ -76,45 +75,45 @@
                         <Button Text="Add Item" />
                     </div>
 
-                    @*<EntryRow>
-                            <CheckBox Text="NPS Score" />
-                            <DropDownGroup>
-                                <DropDown Text="Min" Class="mr-2" />
-                                <DropDown Text="Max" Class="mr-2" />
-                            </DropDownGroup>
-                        </EntryRow>
+                    <EntryRow>
+                        <CheckBox Text="NPS Score" @bind-Checked="model.WithNpscore" Id="chkNPSId" />
+                        <DropDownGroup>
+                            <DropDown Selectables="@(Minvls.Select(minvl => (minvl.Id, minvl.Name)))" @bind-Selected="@model.MinvlId" />
+                            <DropDown Selectables="@(Maxvls.Select(maxvl => (maxvl.Id, maxvl.Name)))" @bind-Selected="@model.MaxvlId" />
+                        </DropDownGroup>
+                    </EntryRow>
 
-                        <EntryRow>
-                            <CheckBox Text="Linkedin Followers" />
-                            <DropDownGroup>
-                                <DropDown Text="Min" Class="mr-2" />
-                                <DropDown Text="Max" Class="mr-2" />
-                            </DropDownGroup>
-                        </EntryRow>
+                    <EntryRow>
+                        <CheckBox Text="Linkedin Followers" @bind-Checked="model.WithLndflwrs" Id="chkLndId" />
+                        <DropDownGroup>
+                            <DropDown Selectables="@(Minvls.Select(minvl => (minvl.Id, minvl.Name)))" @bind-Selected="@model.MinvlId" />
+                            <DropDown Selectables="@(Maxvls.Select(maxvl => (maxvl.Id, maxvl.Name)))" @bind-Selected="@model.MaxvlId" />
+                        </DropDownGroup>
+                    </EntryRow>
 
-                        <EntryRow>
-                            <CheckBox Text="Facebook Followers" />
-                            <DropDownGroup>
-                                <DropDown Text="Min" Class="mr-2" />
-                                <DropDown Text="Max" Class="mr-2" />
-                            </DropDownGroup>
-                        </EntryRow>
+                    <EntryRow>
+                        <CheckBox Text="Facebook Followers" @bind-Checked="model.WithFbflwrs" Id="chkFbfId" />
+                        <DropDownGroup>
+                            <DropDown Selectables="@(Minvls.Select(minvl => (minvl.Id, minvl.Name)))" @bind-Selected="@model.MinvlId" />
+                            <DropDown Selectables="@(Maxvls.Select(maxvl => (maxvl.Id, maxvl.Name)))" @bind-Selected="@model.MaxvlId" />
+                        </DropDownGroup>
+                    </EntryRow>
 
-                        <EntryRow>
-                            <CheckBox Text="Twitter Followers" />
-                            <DropDownGroup>
-                                <DropDown Text="Min" Class="mr-2" />
-                                <DropDown Text="Max" Class="mr-2" />
-                            </DropDownGroup>
-                        </EntryRow>
+                    <EntryRow>
+                        <CheckBox Text="Twitter Followers" @bind-Checked="model.WithTtrflwrs" Id="chkTtrId" />
+                        <DropDownGroup>
+                            <DropDown Selectables="@(Minvls.Select(minvl => (minvl.Id, minvl.Name)))" @bind-Selected="@model.MinvlId" />
+                            <DropDown Selectables="@(Maxvls.Select(maxvl => (maxvl.Id, maxvl.Name)))" @bind-Selected="@model.MaxvlId" />
+                        </DropDownGroup>
+                    </EntryRow>
 
-                        <EntryRow>
-                            <CheckBox Text="Instragram Follwoers" />
-                            <DropDownGroup>
-                                <DropDown Text="Min" Class="mr-2" />
-                                <DropDown Text="Max" Class="mr-2" />
-                            </DropDownGroup>
-                        </EntryRow>*@
+                    <EntryRow>
+                        <CheckBox Text="Instragram Follwoers" @bind-Checked="model.WithIstflwrs" Id="chkIstId" />
+                        <DropDownGroup>
+                            <DropDown Selectables="@(Minvls.Select(minvl => (minvl.Id, minvl.Name)))" @bind-Selected="@model.MinvlId" />
+                            <DropDown Selectables="@(Maxvls.Select(maxvl => (maxvl.Id, maxvl.Name)))" @bind-Selected="@model.MaxvlId" />
+                        </DropDownGroup>
+                    </EntryRow>
                 </div>
             </div>
 
@@ -127,50 +126,50 @@
                         <Button Text="Add Item" />
                     </div>
 
-                    @*<EntryRow>
-                            <CheckBox Text="Market Cap" />
-                            <DropDownGroup>
-                                <DropDown Text="Min" Class="mr-2" />
-                                <DropDown Text="Max" Class="mr-2" />
-                            </DropDownGroup>
-                        </EntryRow>
+                    <EntryRow>
+                        <CheckBox Text="Market Cap" @bind-Checked="model.WithMrtcap" Id="chkMrtId" />
+                        <DropDownGroup>
+                            <DropDown Selectables="@(Minvls.Select(minvl => (minvl.Id, minvl.Name)))" @bind-Selected="@model.MinvlId" />
+                            <DropDown Selectables="@(Maxvls.Select(maxvl => (maxvl.Id, maxvl.Name)))" @bind-Selected="@model.MaxvlId" />
+                        </DropDownGroup>
+                    </EntryRow>
 
-                        <EntryRow>
-                            <CheckBox Text="Revenue" />
-                            <DropDownGroup>
-                                <DropDown Text="Min" Class="mr-2" />
-                                <DropDown Text="Max" Class="mr-2" />
-                            </DropDownGroup>
-                        </EntryRow>
+                    <EntryRow>
+                        <CheckBox Text="Revenue" @bind-Checked="model.WithRevenue" Id="chkRvnId" />
+                        <DropDownGroup>
+                            <DropDown Selectables="@(Minvls.Select(minvl => (minvl.Id, minvl.Name)))" @bind-Selected="@model.MinvlId" />
+                            <DropDown Selectables="@(Maxvls.Select(maxvl => (maxvl.Id, maxvl.Name)))" @bind-Selected="@model.MaxvlId" />
+                        </DropDownGroup>
+                    </EntryRow>
 
-                        <EntryRow>
-                            <CheckBox Text="Employees" />
-                            <DropDownGroup>
-                                <DropDown Text="Min" Class="mr-2" />
-                                <DropDown Text="Max" Class="mr-2" />
-                            </DropDownGroup>
-                        </EntryRow>
+                    <EntryRow>
+                        <CheckBox Text="Employees" @bind-Checked="model.WithEMP" Id="chkEMPId" />
+                        <DropDownGroup>
+                            <DropDown Selectables="@(Minvls.Select(minvl => (minvl.Id, minvl.Name)))" @bind-Selected="@model.MinvlId" />
+                            <DropDown Selectables="@(Maxvls.Select(maxvl => (maxvl.Id, maxvl.Name)))" @bind-Selected="@model.MaxvlId" />
+                        </DropDownGroup>
+                    </EntryRow>
 
-                        <EntryRow>
-                            <CheckBox Text="Financial Year" />
-                            <DropDownGroup>
-                                <DropDown Text="Select" />
-                            </DropDownGroup>
-                        </EntryRow>
+                    <EntryRow>
+                        <CheckBox Text="Financial Year" @bind-Checked="model.WithFncyear" Id="chkFncyrId" />
+                        <DropDownGroup>
+                            <DropDown Selectables="@(Fncyears.Select(fncyear => (fncyear.Id, fncyear.Name)))" @bind-Selected="@model.FncyearId" />
+                        </DropDownGroup>
+                    </EntryRow>
 
-                        <EntryRow>
-                            <CheckBox Text="Stock Price" />
-                            <DropDownGroup>
-                                <DropDown Text="Select" />
-                            </DropDownGroup>
-                        </EntryRow>
+                    <EntryRow>
+                        <CheckBox Text="Stock Price" @bind-Checked="model.WithStkprice" Id="chkStkprcId" />
+                        <DropDownGroup>
+                            <DropDown Selectables="@(Stkprices.Select(stkprice => (stkprice.Id, stkprice.Name)))" @bind-Selected="@model.StkpriceId" />
+                        </DropDownGroup>
+                    </EntryRow>
 
-                        <EntryRow>
-                            <CheckBox Text="Credit Rating" />
-                            <DropDownGroup>
-                                <DropDown Text="Select" />
-                            </DropDownGroup>
-                        </EntryRow>*@
+                    <EntryRow>
+                        <CheckBox Text="Credit Rating" @bind-Checked="model.WithCrdrtn" Id="chkCrdrtnId" />
+                        <DropDownGroup>
+                            <DropDown Selectables="@(Crdrtns.Select(crdrtn => (crdrtn.Id, crdrtn.Name)))" @bind-Selected="@model.CrdrtnId" />
+                        </DropDownGroup>
+                    </EntryRow>
                 </div>
             </div>
 
@@ -183,67 +182,155 @@
                         <Button Text="Add Item" />
                     </div>
 
-                    @*<EntryRow>
-                            <CheckBox Text="ERP" />
-                            <DropDownGroup>
-                                <DropDown Text="Select" />
-                            </DropDownGroup>
-                        </EntryRow>
+                    <EntryRow>
+                        <CheckBox Text="ERP" @bind-Checked="model.WithErp" Id="chkERPId" />
+                        <DropDownGroup>
+                            <DropDown Selectables="@(Erps.Select(erp => (erp.Id, erp.Name)))" @bind-Selected="@model.ErpId" />
+                        </DropDownGroup>
+                    </EntryRow>
 
-                        <EntryRow>
-                            <CheckBox Text="CRM" />
-                            <DropDownGroup>
-                                <DropDown Text="Select" />
-                            </DropDownGroup>
-                        </EntryRow>
+                    <EntryRow>
+                        <CheckBox Text="CRM" @bind-Checked="model.WithCrm" Id="chkCRMId" />
+                        <DropDownGroup>
+                            <DropDown Selectables="@(Crms.Select(crm => (crm.Id, crm.Name)))" @bind-Selected="@model.CrmId" />
+                        </DropDownGroup>
+                    </EntryRow>
 
-                        <EntryRow>
-                            <CheckBox Text="Financial" />
-                            <DropDownGroup>
-                                <DropDown Text="Select" />
-                            </DropDownGroup>
-                        </EntryRow>
+                    <EntryRow>
+                        <CheckBox Text="Financial" @bind-Checked="model.WithFncltool" Id="chkFncltoolId" />
+                        <DropDownGroup>
+                            <DropDown Selectables="@(Fncltools.Select(fncaltool => (fncaltool.Id, fncaltool.Name)))" @bind-Selected="@model.FncaltoolId" />
+                        </DropDownGroup>
+                    </EntryRow>
 
-                        <EntryRow>
-                            <CheckBox Text="Distribution/WH" />
-                            <DropDownGroup>
-                                <DropDown Text="Select" />
-                            </DropDownGroup>
-                        </EntryRow>
+                    <EntryRow>
+                        <CheckBox Text="Distribution/WH" @bind-Checked="model.WithDstwh" Id="chkDstwhId" />
+                        <DropDownGroup>
+                            <DropDown Selectables="@(Dstwhs.Select(dstwhs => (dstwhs.Id, dstwhs.Name)))" @bind-Selected="@model.DstwhsId" />
+                        </DropDownGroup>
+                    </EntryRow>
 
-                        <EntryRow>
-                            <CheckBox Text="Help Desk" />
-                            <DropDownGroup>
-                                <DropDown Text="Select" />
-                            </DropDownGroup>
-                        </EntryRow>
+                    <EntryRow>
+                        <CheckBox Text="Help Desk" @bind-Checked="model.WithHlpdsk" Id="chkHlpdskId" />
+                        <DropDownGroup>
+                            <DropDown Selectables="@(Hlpdsks.Select(hlpdsk => (hlpdsk.Id, hlpdsk.Name)))" @bind-Selected="@model.HlpdskId" />
+                        </DropDownGroup>
+                    </EntryRow>
 
-                        <EntryRow>
-                            <CheckBox Text="Database" />
-                            <DropDownGroup>
-                                <DropDown Text="Select" />
-                            </DropDownGroup>
-                        </EntryRow>*@
+                    <EntryRow>
+                        <CheckBox Text="Database" @bind-Checked="model.WithDbase" Id="chkDbaseId" />
+                        <DropDownGroup>
+                            <DropDown Selectables="@(Dbases.Select(dbase => (dbase.Id, dbase.Name)))" @bind-Selected="@model.DbaseId" />
+                        </DropDownGroup>
+                    </EntryRow>
                 </div>
             </div>
-
         </div>
     </div>
 </div>
 
 @code {
     IEnumerable<Country> Countries => SamData.Countries;
+    IEnumerable<Location> Locations => SamData.Locations;
+    IEnumerable<Industry> Industries => SamData.Industries;
+    IEnumerable<Bmodel> Bmodels => SamData.Bmodels;
+    IEnumerable<Yrsestd> Yrsestds => SamData.Yrsestds;
+    IEnumerable<Minvl> Minvls => SamData.Minvls;
+    IEnumerable<Maxvl> Maxvls => SamData.Maxvls;
 
-    void PrintModel()
-    {
-        var country = model.CountryId == null ? "Unselected" : SamData.Countries.First(c => c.Id == model.CountryId).Name;
-        var s = $"WithCountry = {model.WithCountry}, Country = {country}";
-        Console.WriteLine(s);
-    }
+    IEnumerable<Fncyear> Fncyears => SamData.Fncyears;
+    IEnumerable<Stkprice> Stkprices => SamData.Stkprices;
+    IEnumerable<Crdrtn> Crdrtns => SamData.Crdrtns;
+    IEnumerable<Erp> Erps => SamData.Erps;
+    IEnumerable<Crm> Crms => SamData.Crms;
+    IEnumerable<Fncltool> Fncltools => SamData.Fncltools;
+    IEnumerable<Dstwh> Dstwhs => SamData.Dstwhs;
+    IEnumerable<Hlpdsk> Hlpdsks => SamData.Hlpdsks;
+    IEnumerable<Dbase> Dbases => SamData.Dbases;
+
     class Model
     {
+        //Country Data
         public bool WithCountry { get; set; }
         public string CountryId { get; set; }
+
+        //Location Data
+        public bool WithLocation { get; set; }
+        public string LocationId { get; set; }
+
+        //Industry Data
+        public bool WithIndustry { get; set; }
+        public string IndustryId { get; set; }
+
+        //Business Model Data
+        public bool WithBmodel { get; set; }
+        public string BmodelId { get; set; }
+
+        //Years Established Data
+        public bool WithYrsestd { get; set; }
+        public string YrsestdId { get; set; }
+
+        //NPS Score Data
+        public bool WithNpscore { get; set; }
+
+        //LinkedIn Followers
+        public bool WithLndflwrs { get; set; }
+
+        //Facebook Followers
+        public bool WithFbflwrs { get; set; }
+
+        //Twitter Followers
+        public bool WithTtrflwrs { get; set; }
+
+        //Instragram Followers
+        public bool WithIstflwrs { get; set; }
+
+        //Market Cap Data
+        public bool WithMrtcap { get; set; }
+
+        //Revenue data
+        public bool WithRevenue { get; set; }
+        public bool WithEMP { get; set; }
+
+        // Min-Max Data
+        public string MinvlId { get; set; }
+        public string MaxvlId { get; set; }
+
+        //Financial Year Data
+        public bool WithFncyear { get; set; }
+        public string FncyearId { get; set; }
+
+        //Stock Price Data
+        public bool WithStkprice { get; set; }
+        public string StkpriceId { get; set; }
+
+        //Credit Rating Data
+        public bool WithCrdrtn { get; set; }
+        public string CrdrtnId { get; set; }
+
+        //ERP Data
+        public bool WithErp { get; set; }
+        public string ErpId { get; set; }
+
+        //CRM Data
+        public bool WithCrm { get; set; }
+        public string CrmId { get; set; }
+
+        //Financial Tool
+        public bool WithFncltool { get; set; }
+        public string FncaltoolId { get; set; }
+
+        //Distribution-WH
+        public bool WithDstwh { get; set; }
+        public string DstwhsId { get; set; }
+
+        //Help Desk Tool
+        public bool WithHlpdsk { get; set; }
+        public string HlpdskId { get; set; }
+
+        //Database Tool
+        public bool WithDbase { get; set; }
+        public string DbaseId { get; set; }
     }
     Model model = new Model();
 }
