@@ -23,37 +23,43 @@
         </li>
         <li @onclick=@(() => Show("pipeline"))>
             <a href="javascript:void(0)">
+                <img width="26" src="images/Pipeline.svg" alt="">
+                <span>Pipeline</span>
+            </a>
+        </li>
+        <li @onclick=@(() => Show("prep"))>
+            <a href="javascript:void(0)">
                 <img width="22" src="images/Meeting-Prepartion.svg" alt="">
                 <span>Meeting Preparation</span>
             </a>
         </li>
-        <li>
-            <a href="/agendas">
+        <li @onclick=@(() => Show("agenda"))>
+            <a href="javascript:void(0)">
                 <img width="26" src="images/Agenda.svg" alt="">
                 <span>Agenda</span>
             </a>
         </li>
-        <li>
-            <a href="/meetings">
+        <li @onclick=@(() => Show("note"))>
+            <a href="javascript:void(0)">
                 <img width="26" src="images/Meeting-notes.svg" alt="">
                 <span>Meeting Notes</span>
             </a>
         </li>
         <li>
-            <a href="opportunities.html">
+            <a href="javascript:void(0)">
                 <img width="26" src="images/Sales-Opportunities.svg" alt="">
                 <span>Sales Opportunities</span>
             </a>
         </li>
         <li>
-            <a href="reports.html">
+            <a href="javascript:void(0)">
                 <img width="29" src="images/Sales-Reports.svg" alt="">
                 <span>Sale Reports</span>
             </a>
         </li>
 
         <li>
-            <a href="/settings">
+            <a href="javascript:void(0)">
                 <img width="29" src="images/settings.svg" alt="">
                 <span>Settings</span>
             </a>
@@ -69,11 +75,42 @@
     </SideBarSubMenu>
 }
 
+@if (showprep)
+{
+    <SideBarSubMenu Title="Meeting Prep">
+        <li> <a href="javascript:void(0)" @onclick="@(() => GoTo("/meetingprep/details"))">details</a> </li>
+        <li> <a href="javascript:void(0)" @onclick="@(() => GoTo("/meetingprep/attendees"))">Attendees</a> </li>
+        <li> <a href="javascript:void(0)" @onclick="@(() => GoTo("/meetingprep/meetingresources"))">resources</a> </li>
+        <li> <a href="javascript:void(0)" @onclick="@(() => GoTo("/meetingprep/objectives"))">Objectives</a> </li>
+        <li> <a href="javascript:void(0)" @onclick="@(() => GoTo("/meetingprep/sales"))">Sales</a> </li>
+        <li> <a href="javascript:void(0)" @onclick="@(() => GoTo("/meetingprep/marketing"))">Marketing</a> </li>
+        <li> <a href="javascript:void(0)" @onclick="@(() => GoTo("/meetingprep/news"))">News</a> </li>
+        <li> <a href="javascript:void(0)" @onclick="@(() => GoTo("/meetingprep/socialmedia"))">Social Media</a> </li>
+        <li> <a href="javascript:void(0)" @onclick="@(() => GoTo("/meetingprep/business"))">Business</a> </li>
+        <li> <a href="javascript:void(0)" @onclick="@(() => GoTo("/meetingprep/purchases"))">Purchases</a>  </li>
+    </SideBarSubMenu>
+}
+
+@if (shownote)
+{
+<SideBarSubMenu Title="Meeting Notes">
+    <li> <a href="javascript:void(0)" @onclick="@(() => GoTo("/meetingnotes/ap"))">Action Points</a> </li>
+    <li> <a href="javascript:void(0)" @onclick="@(() => GoTo("/meetingnotes/notes"))">Notes</a> </li>
+    <li> <a href="javascript:void(0)" @onclick="@(() => GoTo("/meetingnotes/sow"))">SOW</a> </li>
+    <li> <a href="javascript:void(0)" @onclick="@(() => GoTo("/meetingnotes/impact"))">IMPACT</a> </li>
+    <li> <a href="javascript:void(0)" @onclick="@(() => GoTo("/meetingnotes/needs"))">NEEDS</a> </li>
+</SideBarSubMenu>
+}
+
 @code {
     bool showpipeline;
-    void Show(string what, bool show = true)
+    bool showprep;
+    bool shownote;
+    
+    void Show(string what, bool? show = null)
     {
         var pi = GetType().GetField($"show{what}", BindingFlags.NonPublic | BindingFlags.Instance);
+        if (show == null) show = !(bool)pi.GetValue(this);
         pi.SetValue(this, show);
     }
     void GoTo(string path)
