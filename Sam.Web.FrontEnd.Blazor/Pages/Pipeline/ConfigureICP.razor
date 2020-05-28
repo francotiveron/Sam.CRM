@@ -1,11 +1,11 @@
 ﻿@page "/pipeline/configure-icp"
-@using DTO;
 @using Sam.Web.FrontEnd.Blazor.Components;
+@using Models
 @using Services
 
 @inherits SamPageBase
 
-@inject ISamDataService Data
+@inject ISamDataService SamData
 
 <div class="sam-content-inner">
     <div class="d-flex align-items-center justify-content-between flex-sm-row flex-column mt-2 mt-lg-0">
@@ -26,44 +26,44 @@
                         <div class="configTitle">
                             <h4>Background</h4>
                         </div>
-                        <Button Text="Add Item"/>
-                        <button Text="Pippo" @onclick="PrintModel" />
+                        <Button Text="Add Item" />
+                        @*<button Text="Pippo" @onclick="PrintModel" />*@
                     </div>
 
                     <EntryRow>
                         <CheckBox Text="Country" @bind-Checked="model.WithCountry" />
                         <DropDownGroup>
-                            <DropDown Selectables="@(DTO.Country.Countries.Select(country => (country.Id, country.Name)))" @bind-Selected="@model.CountryId"/>
+                            <DropDown Selectables="@(Countries.Select(country => (country.Id, country.Name)))" @bind-Selected="@model.CountryId" />
                         </DropDownGroup>
                     </EntryRow>
 
                     @*<EntryRow>
-                        <CheckBox Text="Location" />
-                        <DropDownGroup>
-                            <DropDown Text="Select" />
-                        </DropDownGroup>
-                    </EntryRow>
+                            <CheckBox Text="Location" />
+                            <DropDownGroup>
+                                <DropDown Text="Select" />
+                            </DropDownGroup>
+                        </EntryRow>
 
-                    <EntryRow>
-                        <CheckBox Text="Industry" />
-                        <DropDownGroup>
-                            <DropDown Text="Select" />
-                        </DropDownGroup>
-                    </EntryRow>
+                        <EntryRow>
+                            <CheckBox Text="Industry" />
+                            <DropDownGroup>
+                                <DropDown Text="Select" />
+                            </DropDownGroup>
+                        </EntryRow>
 
-                    <EntryRow>
-                        <CheckBox Text="Business Model" />
-                        <DropDownGroup>
-                            <DropDown Text="Select" />
-                        </DropDownGroup>
-                    </EntryRow>
+                        <EntryRow>
+                            <CheckBox Text="Business Model" />
+                            <DropDownGroup>
+                                <DropDown Text="Select" />
+                            </DropDownGroup>
+                        </EntryRow>
 
-                    <EntryRow>
-                        <CheckBox Text="Years Established" />
-                        <DropDownGroup>
-                            <DropDown Text="Select" />
-                        </DropDownGroup>
-                    </EntryRow>*@
+                        <EntryRow>
+                            <CheckBox Text="Years Established" />
+                            <DropDownGroup>
+                                <DropDown Text="Select" />
+                            </DropDownGroup>
+                        </EntryRow>*@
                 </div>
             </div>
 
@@ -77,44 +77,44 @@
                     </div>
 
                     @*<EntryRow>
-                        <CheckBox Text="NPS Score" />
-                        <DropDownGroup>
-                            <DropDown Text="Min" Class="mr-2" />
-                            <DropDown Text="Max" Class="mr-2" />
-                        </DropDownGroup>
-                    </EntryRow>
+                            <CheckBox Text="NPS Score" />
+                            <DropDownGroup>
+                                <DropDown Text="Min" Class="mr-2" />
+                                <DropDown Text="Max" Class="mr-2" />
+                            </DropDownGroup>
+                        </EntryRow>
 
-                    <EntryRow>
-                        <CheckBox Text="Linkedin Followers" />
-                        <DropDownGroup>
-                            <DropDown Text="Min" Class="mr-2" />
-                            <DropDown Text="Max" Class="mr-2" />
-                        </DropDownGroup>
-                    </EntryRow>
+                        <EntryRow>
+                            <CheckBox Text="Linkedin Followers" />
+                            <DropDownGroup>
+                                <DropDown Text="Min" Class="mr-2" />
+                                <DropDown Text="Max" Class="mr-2" />
+                            </DropDownGroup>
+                        </EntryRow>
 
-                    <EntryRow>
-                        <CheckBox Text="Facebook Followers" />
-                        <DropDownGroup>
-                            <DropDown Text="Min" Class="mr-2" />
-                            <DropDown Text="Max" Class="mr-2" />
-                        </DropDownGroup>
-                    </EntryRow>
+                        <EntryRow>
+                            <CheckBox Text="Facebook Followers" />
+                            <DropDownGroup>
+                                <DropDown Text="Min" Class="mr-2" />
+                                <DropDown Text="Max" Class="mr-2" />
+                            </DropDownGroup>
+                        </EntryRow>
 
-                    <EntryRow>
-                        <CheckBox Text="Twitter Followers" />
-                        <DropDownGroup>
-                            <DropDown Text="Min" Class="mr-2" />
-                            <DropDown Text="Max" Class="mr-2" />
-                        </DropDownGroup>
-                    </EntryRow>
+                        <EntryRow>
+                            <CheckBox Text="Twitter Followers" />
+                            <DropDownGroup>
+                                <DropDown Text="Min" Class="mr-2" />
+                                <DropDown Text="Max" Class="mr-2" />
+                            </DropDownGroup>
+                        </EntryRow>
 
-                    <EntryRow>
-                        <CheckBox Text="Instragram Follwoers" />
-                        <DropDownGroup>
-                            <DropDown Text="Min" Class="mr-2" />
-                            <DropDown Text="Max" Class="mr-2" />
-                        </DropDownGroup>
-                    </EntryRow>*@
+                        <EntryRow>
+                            <CheckBox Text="Instragram Follwoers" />
+                            <DropDownGroup>
+                                <DropDown Text="Min" Class="mr-2" />
+                                <DropDown Text="Max" Class="mr-2" />
+                            </DropDownGroup>
+                        </EntryRow>*@
                 </div>
             </div>
 
@@ -128,49 +128,49 @@
                     </div>
 
                     @*<EntryRow>
-                        <CheckBox Text="Market Cap" />
-                        <DropDownGroup>
-                            <DropDown Text="Min" Class="mr-2" />
-                            <DropDown Text="Max" Class="mr-2" />
-                        </DropDownGroup>
-                    </EntryRow>
+                            <CheckBox Text="Market Cap" />
+                            <DropDownGroup>
+                                <DropDown Text="Min" Class="mr-2" />
+                                <DropDown Text="Max" Class="mr-2" />
+                            </DropDownGroup>
+                        </EntryRow>
 
-                    <EntryRow>
-                        <CheckBox Text="Revenue" />
-                        <DropDownGroup>
-                            <DropDown Text="Min" Class="mr-2" />
-                            <DropDown Text="Max" Class="mr-2" />
-                        </DropDownGroup>
-                    </EntryRow>
+                        <EntryRow>
+                            <CheckBox Text="Revenue" />
+                            <DropDownGroup>
+                                <DropDown Text="Min" Class="mr-2" />
+                                <DropDown Text="Max" Class="mr-2" />
+                            </DropDownGroup>
+                        </EntryRow>
 
-                    <EntryRow>
-                        <CheckBox Text="Employees" />
-                        <DropDownGroup>
-                            <DropDown Text="Min" Class="mr-2" />
-                            <DropDown Text="Max" Class="mr-2" />
-                        </DropDownGroup>
-                    </EntryRow>
+                        <EntryRow>
+                            <CheckBox Text="Employees" />
+                            <DropDownGroup>
+                                <DropDown Text="Min" Class="mr-2" />
+                                <DropDown Text="Max" Class="mr-2" />
+                            </DropDownGroup>
+                        </EntryRow>
 
-                    <EntryRow>
-                        <CheckBox Text="Financial Year" />
-                        <DropDownGroup>
-                            <DropDown Text="Select" />
-                        </DropDownGroup>
-                    </EntryRow>
+                        <EntryRow>
+                            <CheckBox Text="Financial Year" />
+                            <DropDownGroup>
+                                <DropDown Text="Select" />
+                            </DropDownGroup>
+                        </EntryRow>
 
-                    <EntryRow>
-                        <CheckBox Text="Stock Price" />
-                        <DropDownGroup>
-                            <DropDown Text="Select" />
-                        </DropDownGroup>
-                    </EntryRow>
+                        <EntryRow>
+                            <CheckBox Text="Stock Price" />
+                            <DropDownGroup>
+                                <DropDown Text="Select" />
+                            </DropDownGroup>
+                        </EntryRow>
 
-                    <EntryRow>
-                        <CheckBox Text="Credit Rating" />
-                        <DropDownGroup>
-                            <DropDown Text="Select" />
-                        </DropDownGroup>
-                    </EntryRow>*@
+                        <EntryRow>
+                            <CheckBox Text="Credit Rating" />
+                            <DropDownGroup>
+                                <DropDown Text="Select" />
+                            </DropDownGroup>
+                        </EntryRow>*@
                 </div>
             </div>
 
@@ -184,46 +184,46 @@
                     </div>
 
                     @*<EntryRow>
-                        <CheckBox Text="ERP" />
-                        <DropDownGroup>
-                            <DropDown Text="Select" />
-                        </DropDownGroup>
-                    </EntryRow>
+                            <CheckBox Text="ERP" />
+                            <DropDownGroup>
+                                <DropDown Text="Select" />
+                            </DropDownGroup>
+                        </EntryRow>
 
-                    <EntryRow>
-                        <CheckBox Text="CRM" />
-                        <DropDownGroup>
-                            <DropDown Text="Select" />
-                        </DropDownGroup>
-                    </EntryRow>
+                        <EntryRow>
+                            <CheckBox Text="CRM" />
+                            <DropDownGroup>
+                                <DropDown Text="Select" />
+                            </DropDownGroup>
+                        </EntryRow>
 
-                    <EntryRow>
-                        <CheckBox Text="Financial" />
-                        <DropDownGroup>
-                            <DropDown Text="Select" />
-                        </DropDownGroup>
-                    </EntryRow>
+                        <EntryRow>
+                            <CheckBox Text="Financial" />
+                            <DropDownGroup>
+                                <DropDown Text="Select" />
+                            </DropDownGroup>
+                        </EntryRow>
 
-                    <EntryRow>
-                        <CheckBox Text="Distribution/WH" />
-                        <DropDownGroup>
-                            <DropDown Text="Select" />
-                        </DropDownGroup>
-                    </EntryRow>
+                        <EntryRow>
+                            <CheckBox Text="Distribution/WH" />
+                            <DropDownGroup>
+                                <DropDown Text="Select" />
+                            </DropDownGroup>
+                        </EntryRow>
 
-                    <EntryRow>
-                        <CheckBox Text="Help Desk" />
-                        <DropDownGroup>
-                            <DropDown Text="Select" />
-                        </DropDownGroup>
-                    </EntryRow>
+                        <EntryRow>
+                            <CheckBox Text="Help Desk" />
+                            <DropDownGroup>
+                                <DropDown Text="Select" />
+                            </DropDownGroup>
+                        </EntryRow>
 
-                    <EntryRow>
-                        <CheckBox Text="Database" />
-                        <DropDownGroup>
-                            <DropDown Text="Select" />
-                        </DropDownGroup>
-                    </EntryRow>*@
+                        <EntryRow>
+                            <CheckBox Text="Database" />
+                            <DropDownGroup>
+                                <DropDown Text="Select" />
+                            </DropDownGroup>
+                        </EntryRow>*@
                 </div>
             </div>
 
@@ -232,21 +232,18 @@
 </div>
 
 @code {
+    IEnumerable<Country> Countries => SamData.Countries;
 
     void PrintModel()
     {
-        Console.WriteLine(model);
+        var country = model.CountryId == null ? "Unselected" : SamData.Countries.First(c => c.Id == model.CountryId).Name;
+        var s = $"WithCountry = {model.WithCountry}, Country = {country}";
+        Console.WriteLine(s);
     }
     class Model
     {
         public bool WithCountry { get; set; }
         public string CountryId { get; set; }
-
-        public override string ToString()
-        {
-            var country = CountryId == null ? "Unselected" : DTO.Country.Countries.First(c => c.Id == CountryId).Name;
-            return $"WithCountry = {WithCountry}, Country = {country}";
-        }
     }
     Model model = new Model();
 }

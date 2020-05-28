@@ -1,4 +1,9 @@
-﻿<div class="sam-sidebar" @onmouseover="()=>expandSubNav = !expandSubNav">
+﻿@using System.Reflection
+@using System.Text.RegularExpressions
+
+@inject NavigationManager Nav
+
+<div class="sam-sidebar">
     <div class="sam-sidebar-mainlogo d-lg-block d-none">
         <a href="/">
             <img src="images/logoblue.png" alt="Logo">
@@ -16,8 +21,8 @@
                 <span>Home</span>
             </a>
         </li>
-        <li>
-            <a href="/meetings">
+        <li @onclick=@(() => Show("pipeline"))>
+            <a href="javascript:void(0)">
                 <img width="22" src="images/Meeting-Prepartion.svg" alt="">
                 <span>Meeting Preparation</span>
             </a>
@@ -56,17 +61,25 @@
     </ul>
 </div>
 
-@if (expandSubNav)
+@if (showpipeline)
 {
-    <ul class="sam-sidebar submenu" style=" padding-top: 40px; ">
-        <li style="padding-top:0;"><h4>Pipeline</h4></li>
-        <li><a href="javascript:void(0)">Configure ICP</a></li>
-        <li><a href="javascript:void(0)">Suspects</a></li>
-    </ul>
+    <SideBarSubMenu Title="Pipeline">
+        <li><a href="javascript:void(0)" @onclick="@(() => GoTo("/pipeline/configure-icp"))">Configure ICP</a></li>
+        <li><a href="javascript:void(0)" @onclick="@(() => GoTo("/pipeline/suspects"))">Suspects</a></li>
+    </SideBarSubMenu>
 }
 
 @code {
-
-    private bool expandSubNav;
-
+    bool showpipeline;
+    void Show(string what, bool show = true)
+    {
+        var pi = GetType().GetField($"show{what}", BindingFlags.NonPublic | BindingFlags.Instance);
+        pi.SetValue(this, show);
+    }
+    void GoTo(string path)
+    {
+        var major = Regex.Match(path, @"\/(.+)\/").Groups[1].Value;
+        Show(major, false);
+        Nav.NavigateTo(path);
+    }
 }
