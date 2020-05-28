@@ -1,6 +1,6 @@
 ﻿@page "/pipeline/configure-icp"
 @using Sam.Web.FrontEnd.Blazor.Components;
-@using Models
+@using Sam.Data.Model
 @using Services
 
 @inherits SamPageBase
@@ -31,7 +31,7 @@
                     </div>
 
                     <EntryRow>
-                        <CheckBox Text="Country" @bind-Checked="model.WithCountry" />
+                        <CheckBox Text="Country" @bind-Checked="model.WithCountry" Id="CheckBoxCountry" />
                         <DropDownGroup>
                             <DropDown Selectables="@(Countries.Select(country => (country.Id, country.Name)))" @bind-Selected="@model.CountryId" />
                         </DropDownGroup>
@@ -232,18 +232,25 @@
 </div>
 
 @code {
-    IEnumerable<Country> Countries => SamData.Countries;
+    IEnumerable<Country> Countries { get; set; } = new Country[] { };
+
+    protected override async Task OnInitializedAsync()
+    {
+        Countries = await SamData.GetCountries();
+    }
 
     void PrintModel()
     {
-        var country = model.CountryId == null ? "Unselected" : SamData.Countries.First(c => c.Id == model.CountryId).Name;
+        var country = model.CountryId == null ? "Unselected" : Countries.First(c => c.Id == model.CountryId).Name;
         var s = $"WithCountry = {model.WithCountry}, Country = {country}";
         Console.WriteLine(s);
     }
+
     class Model
     {
         public bool WithCountry { get; set; }
         public string CountryId { get; set; }
     }
+
     Model model = new Model();
 }

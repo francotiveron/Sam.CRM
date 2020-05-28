@@ -71,9 +71,10 @@
 
 @code {
     bool showpipeline;
-    void Show(string what, bool show = true)
+    void Show(string what, bool? show = null)
     {
         var pi = GetType().GetField($"show{what}", BindingFlags.NonPublic | BindingFlags.Instance);
+        if (show == null) show = !(bool)pi.GetValue(this);
         pi.SetValue(this, show);
     }
     void GoTo(string path)

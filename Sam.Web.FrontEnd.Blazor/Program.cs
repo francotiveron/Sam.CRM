@@ -8,6 +8,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Sam.Web.FrontEnd.Blazor.Services;
+using Cloudcrate.AspNetCore.Blazor.Browser.Storage;
 
 namespace Sam.Web.FrontEnd.Blazor
 {
@@ -19,7 +20,12 @@ namespace Sam.Web.FrontEnd.Blazor
             builder.RootComponents.Add<App>("app");
 
             builder.Services.AddTransient(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
-            builder.Services.AddSingleton<ISamDataService, SamDataService>();
+            builder.Services.AddStorage();
+#if DEMO
+            builder.Services.AddSingleton<ISamDataService, SamDataServiceLocal>();
+#else
+            builder.Services.AddSingleton<ISamDataService, SamDataServiceRemote>();
+#endif
 
             await builder.Build().RunAsync();
         }

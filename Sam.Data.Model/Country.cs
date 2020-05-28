@@ -1,13 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using System.Text;
 
-namespace Sam.Web.FrontEnd.Blazor.Models
+namespace Sam.Data.Model
 {
     public class Country : DataItem
     {
+        public Country() : base() { }
         public Country(string name) : base(name) { }
     }
-
 }
