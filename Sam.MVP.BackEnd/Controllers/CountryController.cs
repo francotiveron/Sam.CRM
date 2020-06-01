@@ -17,7 +17,7 @@ namespace Sam.MVP.Api.Controllers
         [HttpGet]
         public IEnumerable<Country> Get()
         {
-            return new Country[] { new Country("USA"), new Country("Australia") };
+            return new Country[] { new Country("USA"), new Country("Australia"), new Country("Morocco") };
         }
 
         //// GET api/<CountryController>/5

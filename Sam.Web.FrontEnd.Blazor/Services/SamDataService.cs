@@ -11,7 +11,8 @@ namespace Sam.Web.FrontEnd.Blazor.Services
 {
     public interface ISamDataService
     {
-        Task<IEnumerable<Country>> GetCountries();
+        Task InitializeAsync();
+        IEnumerable<Country> Countries { get; }
 
         IEnumerable<Location> Locations { get; }
 
@@ -77,6 +78,7 @@ namespace Sam.Web.FrontEnd.Blazor.Services
 
         public static Dbase[] _Dbases = new Dbase[] { new Dbase("DBase"), new Dbase("Oracle"), new Dbase("IBM"), new Dbase("Sybase") };
 
+        IEnumerable<Country> ISamDataService.Countries => _Countries;
 
         IEnumerable<Location> ISamDataService.Locations => _Locations;
 
@@ -107,7 +109,10 @@ namespace Sam.Web.FrontEnd.Blazor.Services
         IEnumerable<Hlpdsk> ISamDataService.Hlpdsks => _Hlpdsks;
 
         IEnumerable<Dbase> ISamDataService.Dbases => _Dbases;
-        async Task<IEnumerable<Country>> ISamDataService.GetCountries() => await Task.Run(() => _Countries);
+
+        public async Task InitializeAsync() { await Task.Delay(100); }
+
+        async Task<IEnumerable<Country>> GetCountries() => await Task.Run(() => _Countries);
     }
 
     public class SamDataServiceRemote : ISamDataService
@@ -117,6 +122,9 @@ namespace Sam.Web.FrontEnd.Blazor.Services
         readonly string baseUrl;
         static readonly string countryUrl = @"Country";
         HttpClient hc;
+
+        IEnumerable<Country> countries;
+        public IEnumerable<Country> Countries { get; private set; }
 
         public IEnumerable<Location> Locations => throw new NotImplementedException();
 
@@ -154,6 +162,10 @@ namespace Sam.Web.FrontEnd.Blazor.Services
             else baseUrl = baseDevUrl;
         }
 
-        async Task<IEnumerable<Country>> ISamDataService.GetCountries() => await hc.GetFromJsonAsync<IEnumerable<Country>>(@$"{baseUrl}/{countryUrl}");
+        async Task<IEnumerable<Country>> GetCountriesAsync() => await hc.GetFromJsonAsync<IEnumerable<Country>>(@$"{baseUrl}/{countryUrl}");
+
+        public async Task InitializeAsync() {
+            Countries = await GetCountriesAsync();
+        }
     }
 }
