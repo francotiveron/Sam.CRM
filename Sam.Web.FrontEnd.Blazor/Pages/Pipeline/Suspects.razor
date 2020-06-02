@@ -1,89 +1,166 @@
 ﻿@page "/pipeline/suspects"
-@using Sam.Web.FrontEnd.Blazor.Components
+@using Sam.Web.FrontEnd.Blazor.Components;
+@using Sam.Data.Model
+@using Services
 
 @inherits SamPageBase
-<div class="sam-content-inner">
-    <PageTitle Text="Suspects" /><br />
-    <div class="d-flex align-items-center justify-content-between flex-sm-row flex-column mt-2 mt-lg-0">
-        <div class="sam-title">
-            <h3 class="mb-2 mb-sm-0" style="padding-bottom:20px;">Filter</h3>
-        </div>
-    </div>
-   <DropDownGroup>
-                           
-        <DropDown Text="Countries"/>
-        <DropDown Text="Industries"/>
-        <DropDown Text="Credit Rating"/>
-        <DropDown Text="Linkedin Followers"/>
-        <DropDown Text="Applications"/>
-    </DropDownGroup>
 
-    <DropDownGroup>
-        <DropDown Text="Revenue Min"/>
-        <DropDown Text="Revenue Max"/>
-        <DropDown Text="Employee Min"/>
-        <DropDown Text="Employee Max"/>
-        <DropDown Text="Valuation Min"/>
-    </DropDownGroup>
-    <br />
-    
+@inject ISamDataService SamData
+
+<div class="sam-content-inner">
     <div class="d-flex align-items-center justify-content-between flex-sm-row flex-column mt-2 mt-lg-0">
-        <div class="sam-title">
-            <h3 class="mb-2 mb-sm-0" style="padding-top:20px;">Results</h3>
+        <PageTitle Text="Filter" />
+    </div>
+
+    <div class="mt-4">
+        <div class="d-flex align-items-center justify-content-between flex-sm-row flex-column mt-2 mt-lg-0">
+            <DropDownGroup>
+                <DropDown Selectables="@(Countries.Select(country => (country.Id, country.Name)))" @bind-Selected="@model.CountryId" />
+            </DropDownGroup>
+            <DropDownGroup>
+                <DropDown Selectables="@(Industries.Select(industry => (industry.Id, industry.Name)))" @bind-Selected="@model.IndustryId" />
+            </DropDownGroup>
+            <DropDownGroup>
+                <DropDown Selectables="@(Crdrtns.Select(crdrtn => (crdrtn.Id, crdrtn.Name)))" @bind-Selected="@model.CrdrtnId" />
+            </DropDownGroup>
+            <DropDownGroup>
+                <DropDown Selectables="@(Maxvls.Select(maxvl => (maxvl.Id, maxvl.Name)))" @bind-Selected="@model.MaxvlId" />
+            </DropDownGroup>
+            <DropDownGroup>
+                <DropDown Selectables="@(Crms.Select(crm => (crm.Id, crm.Name)))" @bind-Selected="@model.CrmId" />
+            </DropDownGroup>
+        </div>
+        <div class="d-flex align-items-center justify-content-between flex-sm-row flex-column mt-2 mt-lg-0">
+            <DropDownGroup>
+                <DropDown Selectables="@(Minvls.Select(minvl => (minvl.Id, minvl.Name)))" @bind-Selected="@model.MinvlId" />
+            </DropDownGroup>
+            <DropDownGroup>
+                <DropDown Selectables="@(Maxvls.Select(maxvl => (maxvl.Id, maxvl.Name)))" @bind-Selected="@model.MaxvlId" />
+            </DropDownGroup>
+            <DropDownGroup>
+                <DropDown Selectables="@(Minvls.Select(minvl => (minvl.Id, minvl.Name)))" @bind-Selected="@model.MinvlId" />
+            </DropDownGroup>
+            <DropDownGroup>
+                <DropDown Selectables="@(Maxvls.Select(maxvl => (maxvl.Id, maxvl.Name)))" @bind-Selected="@model.MaxvlId" />
+            </DropDownGroup>
+            <DropDownGroup>
+                <DropDown Selectables="@(Maxvls.Select(maxvl => (maxvl.Id, maxvl.Name)))" @bind-Selected="@model.MaxvlId" />
+            </DropDownGroup>
         </div>
     </div>
-    <div class="sam-input-group p-4" style="margin-top:20px;">
-                <table class="sam-table table footable">
-                    <thead>
-                        <tr>
-                            <th width="160" align="center">Company Name<img src="images/arrow-down.svg" alt="..." style="padding-left:1px;"></th>
-                            <th>Region<img src="images/arrow-down.svg" alt="..." style="padding-left: 2px;"></th>
-                            <th data-hide="phone,tablet" class="mdwidthTable" align="center">Industry<img src="images/arrow-down.svg" alt="..." style="padding-left: 2px;"></th>
-                            <th data-hide="phone,tablet" align="center">Revenue<img src="images/arrow-down.svg" alt="..." style="padding-left: 2px;"></th>
-                            <th data-hide="phone,tablet" align="center">Source<img src="images/arrow-down.svg" alt="..." style="padding-left: 2px;"></th>
-                            <th data-hide="phone,tablet" align="center">ICP %Match<img src="images/arrow-down.svg" alt="..." style="padding-left: 2px;"></th>
-                            <th data-hide="phone,tablet" align="center">Assign<img src="images/arrow-down.svg" alt="..." style="padding-left: 2px;"></th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td width="160" align="center">Sam.Coach</td>
-                            <td>Asia</td>
-                            <td>Pharmaceutical</td>
-                            <td>$6B</td>
-                            <td>CRM</td>
-                            <td>99%</td>
-                            <td>
-                                <DropDown Text="Select"/>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td width="160" align="center">Sam.Coach Expert</td>
-                            <td>Europe</td>
-                            <td>IT & Technology</td>
-                            <td>$3.2B</td>
-                            <td>CRM</td>
-                            <td>98%</td>
-                            <td>
-                                <DropDown Text="Select"/>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td width="160" align="center">Sam.Coach Advance</td>
-                            <td>Australia</td>
-                            <td>Energy</td>
-                            <td>950M</td>
-                            <td>Internet</td>
-                            <td>87%</td>
-                            <td>
-                                <DropDown Text="Select"/>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
+
+    <div class="mt-4">
+        <div class="row align-items-center">
+            <div class="col-md">
+                <PageTitle Text="Suspects" />
+            </div>
+            <div class="col-md">
+                <div class="btnsec text-right">
+                    <a href="javascript:void(0);" class="sam-field-icon">
+                        <img src="images/edit.svg" alt="...">
+                    </a>
+                </div>
             </div>
         </div>
+    </div>
+
+    <div class="mt-4">
+        <div class="sam-input-group p-4">
+            <table class="sam-table table footable">
+                <thead>
+                    <tr>
+                        <th width="160" align="center">Company Name<img src="images/arrow-down.svg" alt="..." style="padding-left:1px;"></th>
+                        <th>Region<img src="images/arrow-down.svg" alt="..." style="padding-left: 2px;"></th>
+                        <th data-hide="phone,tablet" class="mdwidthTable" align="center">Industry<img src="images/arrow-down.svg" alt="..." style="padding-left: 2px;"></th>
+                        <th data-hide="phone,tablet" align="center">Revenue<img src="images/arrow-down.svg" alt="..." style="padding-left: 2px;"></th>
+                        <th data-hide="phone,tablet" align="center">Source<img src="images/arrow-down.svg" alt="..." style="padding-left: 2px;"></th>
+                        <th data-hide="phone,tablet" align="center">ICP %Match<img src="images/arrow-down.svg" alt="..." style="padding-left: 2px;"></th>
+                        <th data-hide="phone,tablet" align="center">Assign<img src="images/arrow-down.svg" alt="..." style="padding-left: 2px;"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td width="160" align="center">Sam.Coach</td>
+                        <td>Asia</td>
+                        <td>Pharmaceutical</td>
+                        <td>$6B</td>
+                        <td>CRM</td>
+                        <td>99%</td>
+                        <td>
+                            <DropDownGroup>
+                                <DropDown Selectables="@(Allots.Select(allot => (allot.Id, allot.Name)))" @bind-Selected="@model.AllotId" />
+                            </DropDownGroup>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="160" align="center">Sam.Coach Expert</td>
+                        <td>Europe</td>
+                        <td>IT & Technology</td>
+                        <td>$3.2B</td>
+                        <td>CRM</td>
+                        <td>98%</td>
+                        <td>
+                            <DropDownGroup>
+                                <DropDown Selectables="@(Allots.Select(allot => (allot.Id, allot.Name)))" @bind-Selected="@model.AllotId" />
+                            </DropDownGroup>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="160" align="center">Sam.Coach Advance</td>
+                        <td>Australia</td>
+                        <td>Energy</td>
+                        <td>950M</td>
+                        <td>Internet</td>
+                        <td>87%</td>
+                        <td>
+                            <DropDownGroup>
+                                <DropDown Selectables="@(Allots.Select(allot => (allot.Id, allot.Name)))" @bind-Selected="@model.AllotId" />
+                            </DropDownGroup>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
 
 @code {
+    IEnumerable<Industry> Industries => SamData.Industries;
+    IEnumerable<Minvl> Minvls => SamData.Minvls;
+    IEnumerable<Maxvl> Maxvls => SamData.Maxvls;
+    IEnumerable<Crdrtn> Crdrtns => SamData.Crdrtns;
+    IEnumerable<Crm> Crms => SamData.Crms;
+    IEnumerable<Country> Countries => SamData.Countries;
+    IEnumerable<Allot> Allots => SamData.Allots;
+
+    protected override async Task OnInitializedAsync()
+    {
+        await SamData.InitializeAsync();
+    }
+
+
+    class Model
+    {
+        //Country Data
+        public string CountryId { get; set; }
+
+        //Industry Data
+        public string IndustryId { get; set; }
+
+        // Min-Max Data
+        public string MinvlId { get; set; }
+        public string MaxvlId { get; set; }
+
+        //Credit Rating Data
+        public string CrdrtnId { get; set; }
+
+        //CRM Data
+        public string CrmId { get; set; }
+
+        //Allot Data
+        public string AllotId { get; set; }
+    }
+
+    Model model = new Model();
 
 }

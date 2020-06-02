@@ -12,6 +12,7 @@ namespace Sam.Web.FrontEnd.Blazor.Services
     public interface ISamDataService
     {
         Task InitializeAsync();
+
         IEnumerable<Country> Countries { get; }
 
         IEnumerable<Location> Locations { get; }
@@ -43,6 +44,9 @@ namespace Sam.Web.FrontEnd.Blazor.Services
         IEnumerable<Hlpdsk> Hlpdsks { get; }
 
         IEnumerable<Dbase> Dbases { get; }
+
+        IEnumerable<Allot> Allots { get; }
+
     }
     public class SamDataServiceLocal : ISamDataService
     {
@@ -78,6 +82,8 @@ namespace Sam.Web.FrontEnd.Blazor.Services
 
         public static Dbase[] _Dbases = new Dbase[] { new Dbase("DBase"), new Dbase("Oracle"), new Dbase("IBM"), new Dbase("Sybase") };
 
+        public static Allot[] _Allots = new Allot[] { new Allot("Rupak C"), new Allot("Jing"), new Allot("Franco"), new Allot("Roger") };
+        
         IEnumerable<Country> ISamDataService.Countries => _Countries;
 
         IEnumerable<Location> ISamDataService.Locations => _Locations;
@@ -110,6 +116,8 @@ namespace Sam.Web.FrontEnd.Blazor.Services
 
         IEnumerable<Dbase> ISamDataService.Dbases => _Dbases;
 
+        IEnumerable<Allot> ISamDataService.Allots => _Allots;
+
         public async Task InitializeAsync() { await Task.Delay(100); }
 
         async Task<IEnumerable<Country>> GetCountries() => await Task.Run(() => _Countries);
@@ -123,7 +131,6 @@ namespace Sam.Web.FrontEnd.Blazor.Services
         static readonly string countryUrl = @"Country";
         HttpClient hc;
 
-        IEnumerable<Country> countries;
         public IEnumerable<Country> Countries { get; private set; }
 
         public IEnumerable<Location> Locations => throw new NotImplementedException();
@@ -155,6 +162,8 @@ namespace Sam.Web.FrontEnd.Blazor.Services
         public IEnumerable<Hlpdsk> Hlpdsks => throw new NotImplementedException();
 
         public IEnumerable<Dbase> Dbases => throw new NotImplementedException();
+
+        public IEnumerable<Allot> Allots => throw new NotImplementedException();
 
         public SamDataServiceRemote(HttpClient httpClient, IWebAssemblyHostEnvironment env) { 
             hc = httpClient;

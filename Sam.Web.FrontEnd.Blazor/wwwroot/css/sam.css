@@ -55,7 +55,8 @@ ul, li {
     pointer-events: none;
 }
 .sam-field-icon > img {
-    width: 17px;
+    width: 20px;
+    margin-left: 5px;
 }
 
 .sam-content {
