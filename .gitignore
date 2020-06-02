@@ -338,3 +338,5 @@ ASALocalRun/
 
 # BeatPulse healthcheck temp database
 healthchecksdb
+Sam.sln
+Sam.MVP.BackEnd/Properties/launchSettings.json
