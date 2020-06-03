@@ -2,6 +2,7 @@
 @import "sam/sidebar.css";
 @import "sam/topbar.css";
 @import "sam/progressbar.css";
+@import "sam/footbar.css";
 /*HTML*/
 body {
     margin: 0;
