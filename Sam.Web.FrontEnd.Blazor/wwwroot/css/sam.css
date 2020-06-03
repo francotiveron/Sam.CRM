@@ -47,6 +47,15 @@ ul, li {
 .sam-right-field-icon {
     position: relative;
 }
+
+.sam-right-field-icon > span {
+    position: absolute;
+    right: 25px;
+    top: 50%;
+    transform: translate(0, -50%);
+    color: #b7b7b7;
+}
+
 .sam-field-icon {
     position: absolute;
     right: 20px;
