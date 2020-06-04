@@ -1,0 +1,157 @@
+﻿@page "/meetingprep/attendees"
+@using Sam.Web.FrontEnd.Blazor.Components;
+@using Sam.Data.Model
+@using Services
+
+@inherits SamPageBase
+
+@inject ISamDataService SamData
+
+<div class="sam-content-inner">
+    <div class="d-flex align-items-center justify-content-between flex-sm-row flex-column mt-2 mt-lg-0">
+        <div class="customSelect w-100">
+            <div class="sam-right-field-icon">
+                <input type="text" class="form-control" placeholder="02/06/2020">
+                <span><img src="images/Date.svg" alt=""></span>
+            </div>
+        </div>
+        <DropDownGroup>
+            <DropDown Selectables="@(Allots.Select(allot => (allot.Id, allot.Name)))" @bind-Selected="@model.AllotId" />
+        </DropDownGroup>
+        <DropDownGroup>
+            <DropDown Selectables="@(Companies.Select(company => (company.Id, company.Name)))" @bind-Selected="@model.CompanyId" />
+        </DropDownGroup>
+        <div class="customSelect w-100">
+            <div class="sam-right-field-icon">
+                <input type="text" class="form-control">
+                <span><img src="images/SImage.png" alt=""></span>
+            </div>
+        </div>
+    </div>
+    <div class="mt-4">
+        <div class="tab-content">
+            <div role="tabpanel">
+                <div class="row align-items-center">
+                    <div class="col-md">
+                        <PageTitle Text="Attendees" />
+                    </div>
+                    <div class="col-md">
+                        <div class="btnsec text-right">
+                            <Button Text="Question Composer" />
+                        </div>
+                    </div>
+                </div>
+                <div class="card card-primary mt-4">
+                    <div class="tablecstm meetingpreparation table-responsive-md spaceLess">
+                        <Card Displayvalue="d-block" />
+                        <table class="table footable">
+                            <thead>
+                                <tr>
+                                    <th>Linkedin Profile</th>
+                                    <th>Name</th>
+                                    <th>Position</th>
+                                    <th>Company</th>
+                                    <th>Attendence</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <span class="sam-table-userimg">
+                                            <img src="images/userimg1.png" alt="">
+                                        </span>
+                                    </td>
+                                    <td>Joanna Campbell</td>
+                                    <td>CIO</td>
+                                    <td>Alcheme</td>
+                                    <td><span class="sam-card-atn-badge badge-success">Accepted</span></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span class="sam-table-userimg">
+                                            <img src="images/userimg2.png" alt="">
+                                        </span>
+                                    </td>
+                                    <td>Aaron Smith</td>
+                                    <td>Team Lead</td>
+                                    <td>Alcheme</td>
+                                    <td><span class="sam-card-atn-badge badge-success">Accepted</span></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span class="sam-table-userimg">
+                                            <img src="images/userimg3.png" alt="">
+                                        </span>
+                                    </td>
+                                    <td>Nashi Purcell</td>
+                                    <td>BA</td>
+                                    <td>Alcheme</td>
+                                    <td><span class="sam-card-atn-badge badge-success">Accepted</span></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span class="sam-table-userimg">
+                                            <img src="images/userimg.jpg" alt="">
+                                        </span>
+                                    </td>
+                                    <td>Jason Bourne</td>
+                                    <td>Business Development Manager</td>
+                                    <td>SAM</td>
+                                    <td><span class="sam-card-atn-badge badge-danger">Declined</span></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span class="sam-table-userimg">
+                                            <img src="images/userimg5.png" alt="">
+                                        </span>
+                                    </td>
+                                    <td>Katie Perry</td>
+                                    <td>Presales Consultant</td>
+                                    <td>SAM</td>
+                                    <td><span class="sam-card-atn-badge badge-primary">Pending</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="card card-primary mt-4">
+                    <div class="tablecstm meetingpreparation table-responsive-md spaceLess">
+                        <div class="card-header">
+                            <div class="d-flex justify-content-between">
+                                <div class="sam-title">
+                                    <h3>Schedule Meeting</h3>
+                                </div>
+                                <div>
+                                    <Button Text="Make Recurring" />
+                                    <Button Text="Add" />
+                                </div>
+                            </div>
+                        </div>                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@code {
+    IEnumerable<Allot> Allots => SamData.Allots;
+    IEnumerable<Company> Companies => SamData.Companies;
+
+    protected override async Task OnInitializedAsync()
+    {
+        await SamData.InitializeAsync();
+    }
+
+
+    class Model
+    {
+        //Allot Data
+        public string AllotId { get; set; }
+
+        //Company Data
+        public string CompanyId { get; set; }
+    }
+
+    Model model = new Model();
+
+}

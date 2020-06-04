@@ -1,4 +1,4 @@
-﻿@page "/meetingpreparation/suspects"
+﻿@page "/meetingprep/objectives"
 @using Sam.Web.FrontEnd.Blazor.Components;
 @using Sam.Data.Model
 @using Services
@@ -28,105 +28,145 @@
             </div>
         </div>
     </div>
-
     <div class="mt-4">
         <div class="tab-content">
-            <!-- Attendees Section :: Start -->
             <div role="tabpanel">
-                <div class="tabheader">
-                    <div class="row align-items-center">
-                        <div class="col-md">
-                            <PageTitle Text="Objectives" />
-                        </div>
-                        <div class="col-md">
+                <div class="row align-items-center">
+                    <div class="col-md">
+                        <PageTitle Text="Objective" />
+                    </div>
+                    <div class="col-md">
+                        <div class="btnsec text-right">
                             <Button Text="Question Composer" />
                         </div>
                     </div>
                 </div>
-                <div class="mt-4">
-                    <div class="card card-primary">
-                        <div class="tablecstm meetingpreparation table-responsive-md spaceLess" style="background: #fafafc; border-radius: 8px;">
-                            <div class="card-header" style="background: #fafafc">
-                                <div class="card-tools" style="text-align:right;">
-                                    <button type="button" class="btn btn-tool ">
-                                        <i class="fa fa-pencil-square-o"></i>
-                                    </button>
+                <div class="card card-primary mt-4">
+                    <div class="tablecstm meetingpreparation table-responsive-md spaceLess">
+                        <Card Text="" Displayvalue="d-block" />
+                        <table class="table footable">
+                            <thead>
+                                <tr>
+                                    <th>Number</th>
+                                    <th>Proposed Discussion Points</th>
+                                    <th>Stakeholder</th>
+                                    <th>Title</th>
+                                    <th>Time Allocation</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>Understand Alcheme’s operating environment, company culture, business objectives</td>
+                                    <td>Joanna Campbell</td>
+                                    <td>CIO</td>
+                                    <td>15 mins</td>
+                                    <td><span class="sam-card-obj-badge badge-success">90%</span></td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>Understand some of the key chalenges that Alcheme IT team are facing</td>
+                                    <td>Aaron Smith</td>
+                                    <td>Team Lead</td>
+                                    <td>20 mins</td>
+                                    <td><span class="sam-card-obj-badge badge-primary">70%</span></td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>Define the requirements of what Alcheme is trying to accomplish with the integration</td>
+                                    <td>Nashi Purcell</td>
+                                    <td>BA</td>
+                                    <td>30 mins</td>
+                                    <td><span class="sam-card-obj-badge bg-primary">70%</span></td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>Understand the constraints surrounding the project</td>
+                                    <td>Jason Bourne</td>
+                                    <td>Business Development Manager</td>
+                                    <td>25 mins</td>
+                                    <td><span class="sam-card-obj-badge bg-danger">50%</span></td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td>Define the time frame for the project</td>
+                                    <td>Katie Perry</td>
+                                    <td>Presales Consultant</td>
+                                    <td>18 mins</td>
+                                    <td><span class="sam-card-obj-badge badge-success">80%</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="card card-primary mt-4">
+                    <div class="tablecstm meetingpreparation table-responsive-md spaceLess">
+                        <Card Text="Recommendation" Displayvalue="d-none" />
+                        <ul class="nav nav-tabs nav-justified" id="recoTab" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link active" id="ceo-tab" data-toggle="tab" href="javascript:void(0)" role="tab" aria-controls="ceo" aria-selected="true">CEO</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="cio-tab" data-toggle="tab" href="javascript:void(0)" role="tab" aria-controls="cio" aria-selected="false">CIO</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="cfo-tab" data-toggle="tab" href="javascript:void(0)" role="tab" aria-controls="cfo" aria-selected="false">CFO</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="cto-tab" data-toggle="tab" href="javascript:void(0)" role="tab" aria-controls="cto" aria-selected="false">CTO</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="coo-tab" data-toggle="tab" href="javascript:void(0)" role="tab" aria-controls="coo" aria-selected="false">COO</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="itm-tab" data-toggle="tab" href="javascript:void(0)" role="tab" aria-controls="itm" aria-selected="false">IT Manager</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="apm-tab" data-toggle="tab" href="javascript:void(0)" role="tab" aria-controls="apm" aria-selected="false">Application Manager</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="itm-tab" data-toggle="tab" href="javascript:void(0)" role="tab" aria-controls="itm" aria-selected="false">Infarstructure Manager</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="su-tab" data-toggle="tab" href="javascript:void(0)" role="tab" aria-controls="su" aria-selected="false">Super User</a>
+                            </li>
+                        </ul>
+                        <div class="tab-content" id="recoTabContent">
+                            <div class="tab-pane fade show active" id="ceo" role="tabpanel" aria-labelledby="ceo-tab">
+                                <div class="panel-group" id="accordion">
+                                    <div class="panel panel-default">
+                                        <div class="sam-title">
+                                            <h3>
+                                                <a data-toggle="collapse" data-parent="#accordion" href="javascript:void(0)"><img class="sam-card-image" src="images/plus.png" alt="...">Company strategic objective</a>
+                                            </h3>
+                                        </div>
+                                        <div id="collapse1" class="panel-collapse collapse in">
+                                            <div class="panel-body">Understand company strategic objective for the next 5 years.</div>
+                                        </div>
+                                    </div>
+                                    <div class="panel panel-default">
+                                        <div class="sam-title">
+                                            <h3>
+                                                <a data-toggle="collapse" data-parent="#accordion" href="javascript:void(0)"><img class="sam-card-image" src="images/plus.png" alt="...">Company service offering</a>
+                                            </h3>
+                                        </div>
+                                        <div id="collapse2" class="panel-collapse collapse">
+                                            <div class="panel-body">Understand company core service offering.</div>
+                                        </div>
+                                        <div class="panel panel-default">
+                                            <div class="sam-title">
+                                                <h3>
+                                                    <a data-toggle="collapse" data-parent="#accordion" href="javascript:void(0)"><img class="sam-card-image" src="images/plus.png" alt="...">Company culture and business objectives</a>
+                                                </h3>
+                                            </div>
+                                            <div id="collapse3" class="panel-collapse collapse">
+                                                <div class="panel-body">Understand company operating enviornment culture and business objectives.</div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                            <table class="table footable">
-                                <thead>
-                                    <tr>
-                                        <th style="width:160px; align=center;">Linkedin Profile</th>
-                                        <th>Name</th>
-                                        <th data-hide="phone,tablet" class="mdwidthTable">Position</th>
-                                        <th data-hide="phone,tablet">Company</th>
-                                        <th data-hide="phone,tablet">Association</th>
-                                        <th data-hide="phone,tablet">Attendence</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td style="width:160px; align=center;">
-                                            <span class="tableuserimg">
-                                                <img src="images/userimg1.png" alt="">
-                                            </span>
-                                        </td>
-                                        <td>Joanna Campbell</td>
-                                        <td>CIO</td>
-                                        <td>Alcheme</td>
-                                        <td>ACS</td>
-                                        <td><span class="bg-success" style="border-radius: .25rem;padding: .25em .4em;color: white;">Accepted</span></td>
-                                    </tr>
-                                    <tr>
-                                        <td style="width:160px; align=center;">
-                                            <span class="tableuserimg">
-                                                <img src="images/userimg2.png" alt="">
-                                            </span>
-                                        </td>
-                                        <td>Aaron Smith</td>
-                                        <td>Team Lead</td>
-                                        <td>Alcheme</td>
-                                        <td></td>
-                                        <td><span class="bg-success" style="border-radius:0.25rem; padding:0.25em 0.4em; color:white;">Accepted</span></td>
-                                    </tr>
-                                    <tr>
-                                        <td style="width:160px; align=center;">
-                                            <span class="tableuserimg">
-                                                <img src="images/userimg3.png" alt="">
-                                            </span>
-                                        </td>
-                                        <td>Nashi Purcell</td>
-                                        <td>BA</td>
-                                        <td>Alcheme</td>
-                                        <td>IEA</td>
-                                        <td><span class=" bg-success" style="border-radius: .25rem;padding: .25em .4em;color: white;">Accepted</span></td>
-                                    </tr>
-                                    <tr>
-                                        <td style="width:160px; align=center;">
-                                            <span class="tableuserimg">
-                                                <img src="images/userimg.jpg" alt="">
-                                            </span>
-                                        </td>
-                                        <td>Jason Bourne</td>
-                                        <td>Business Development Manager</td>
-                                        <td>SAM</td>
-                                        <td></td>
-                                        <td><span class=" bg-danger" style="border-radius: .25rem;padding: .25em .4em;color: white;">Declined</span></td>
-                                    </tr>
-                                    <tr>
-                                        <td style="width:160px; align=center;">
-                                            <span class="tableuserimg">
-                                                <img src="images/userimg5.png" alt="">
-                                            </span>
-                                        </td>
-                                        <td>Katie Perry</td>
-                                        <td>Presales Consultant</td>
-                                        <td>SAM</td>
-                                        <td></td>
-                                        <td><span class=" badge-primary" style="border-radius: .25rem;padding: .25em .4em;color: white;">Pending</span></td>
-                                    </tr>
-                                </tbody>
-                            </table>
                         </div>
                     </div>
                 </div>
@@ -134,7 +174,6 @@
         </div>
     </div>
 </div>
-
 @code {
     IEnumerable<Allot> Allots => SamData.Allots;
     IEnumerable<Company> Companies => SamData.Companies;
