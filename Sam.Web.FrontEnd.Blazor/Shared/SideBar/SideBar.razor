@@ -27,7 +27,7 @@
                 <span>Pipeline</span>
             </a>
         </li>
-        <li @onclick=@(() => Show("prep"))>
+        <li @onclick=@(() => Show("meetingprep"))>
             <a href="javascript:void(0)">
                 <img width="22" src="images/Meeting-Prepartion.svg" alt="">
                 <span>Meeting Preparation</span>
@@ -39,7 +39,7 @@
                 <span>Agenda</span>
             </a>
         </li>
-        <li @onclick=@(() => Show("note"))>
+        <li @onclick=@(() => Show("meetingnotes"))>
             <a href="javascript:void(0)">
                 <img width="26" src="images/Meeting-notes.svg" alt="">
                 <span>Meeting Notes</span>
@@ -75,7 +75,7 @@
     </SideBarSubMenu>
 }
 
-@if (showprep)
+@if (showmeetingprep)
 {
     <SideBarSubMenu Title="Meeting Preparation">
         <li><a href="javascript:void(0)" @onclick="@(() => GoTo("/meetingprep/details"))">Details</a></li>
@@ -91,7 +91,7 @@
     </SideBarSubMenu>
 }
 
-@if (shownote)
+@if (showmeetingnotes)
 {
     <SideBarSubMenu Title="Meeting Notes">
         <li><a href="javascript:void(0)" @onclick="@(() => GoTo("/meetingnotes/ap"))">Action Points</a></li>
@@ -104,8 +104,8 @@
 
 @code {
     bool showpipeline;
-    bool showprep;
-    bool shownote;
+    bool showmeetingprep;
+    bool showmeetingnotes;
 
     void Show(string what, bool? show = null)
     {
