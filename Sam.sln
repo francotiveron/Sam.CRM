@@ -9,6 +9,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sam.MVP.Api", "Sam.MVP.Back
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sam.Data.Model", "Sam.Data.Model\Sam.Data.Model.csproj", "{BC379675-27F6-486A-8CFB-9CBCBCC12B50}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sam.Web.FrontEnd.Blazor.Components", "Sam.Web.FrontEnd.Blazor.Components\Sam.Web.FrontEnd.Blazor.Components.csproj", "{66E109FB-CAD1-4B09-9F6A-1CBA5CC54007}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -32,6 +34,12 @@ Global
 		{BC379675-27F6-486A-8CFB-9CBCBCC12B50}.Demo|Any CPU.ActiveCfg = Debug|Any CPU
 		{BC379675-27F6-486A-8CFB-9CBCBCC12B50}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BC379675-27F6-486A-8CFB-9CBCBCC12B50}.Release|Any CPU.Build.0 = Release|Any CPU
+		{66E109FB-CAD1-4B09-9F6A-1CBA5CC54007}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{66E109FB-CAD1-4B09-9F6A-1CBA5CC54007}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{66E109FB-CAD1-4B09-9F6A-1CBA5CC54007}.Demo|Any CPU.ActiveCfg = Debug|Any CPU
+		{66E109FB-CAD1-4B09-9F6A-1CBA5CC54007}.Demo|Any CPU.Build.0 = Debug|Any CPU
+		{66E109FB-CAD1-4B09-9F6A-1CBA5CC54007}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{66E109FB-CAD1-4B09-9F6A-1CBA5CC54007}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

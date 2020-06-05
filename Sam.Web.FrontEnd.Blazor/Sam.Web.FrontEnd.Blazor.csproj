@@ -13,9 +13,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Components\**" />
     <Compile Remove="wwwroot\css\images\**" />
+    <Content Remove="Components\**" />
     <Content Remove="wwwroot\css\images\**" />
+    <EmbeddedResource Remove="Components\**" />
     <EmbeddedResource Remove="wwwroot\css\images\**" />
+    <None Remove="Components\**" />
     <None Remove="wwwroot\css\images\**" />
   </ItemGroup>
 
@@ -29,6 +33,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Sam.Data.Model\Sam.Data.Model.csproj" />
+    <ProjectReference Include="..\Sam.Web.FrontEnd.Blazor.Components\Sam.Web.FrontEnd.Blazor.Components.csproj" />
   </ItemGroup>
 
   <ItemGroup>
